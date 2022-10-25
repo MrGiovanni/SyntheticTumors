@@ -11,4 +11,10 @@ This repository provides extensive examples of synthetic liver tumors generated 
 <sup>1 </sup>Huazhong University of Science and Technology,   <sup>2 </sup>Johns Hopkins University, <br/>
 <sup>3 </sup>Fudan University,   <sup>4 </sup>The First Affiliated Hospital of Nanjing Medical University <br/>
 Medical Imaging Meets NeurIPS, 2022 <br/>
-[paper]() | [code](https://github.com/MrGiovanni/SyntheticTumors) | [slides]()
+[paper]() | [code](https://github.com/MrGiovanni/SyntheticTumors) | [slides]() | [demo]()
+
+## TODO
+
+[x] Upload the paper to arxiv
+[ ] Make a video about Visual Turing Test and upload it to YouTube
+
