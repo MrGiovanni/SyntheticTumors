@@ -8,6 +8,7 @@ This repository provides extensive examples of synthetic liver tumors generated 
 
 <b>Synthetic Tumors Make AI Segment Tumors Better</b> <br/>
 [Qixin Hu]()<sup>1</sup>, [Junfei Xiao](https://lambert-x.github.io/)<sup>2</sup>, [Alan L. Yuille](https://www.cs.jhu.edu/~ayuille/)<sup>3</sup>, and [Zongwei Zhou](https://www.zongweiz.com/)<sup>3,*</sup> <br/>
-<sup>1 </sup>Huazhong University of Science and Technology,   <sup>2 </sup>Johns Hopkins University,   <sup>3 </sup>Fudan University,   <sup>4 </sup>The First Affiliated Hospital of Nanjing Medical University <br/>
+<sup>1 </sup>Huazhong University of Science and Technology,   <sup>2 </sup>Johns Hopkins University, <br/>
+<sup>3 </sup>Fudan University,   <sup>4 </sup>The First Affiliated Hospital of Nanjing Medical University <br/>
 Medical Imaging Meets NeurIPS, 2022 <br/>
 [paper]() | [code](https://github.com/MrGiovanni/SyntheticTumors) | [slides]()
