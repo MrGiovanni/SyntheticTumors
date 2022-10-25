@@ -15,6 +15,6 @@ Medical Imaging Meets NeurIPS, 2022 <br/>
 
 ## TODO
 
-[x] Upload the paper to arxiv
-[ ] Make a video about Visual Turing Test and upload it to YouTube
+- [x] Upload the paper to arxiv
+- [ ] Make a video about Visual Turing Test and upload it to YouTube
 
