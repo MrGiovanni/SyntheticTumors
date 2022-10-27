@@ -4,6 +4,8 @@ This repository provides extensive examples of synthetic liver tumors generated 
 
 **Amazing**, right? 
 
+<p align="center"><img width="100%" src="figures/VisualTuringTest.png" /></p>
+
 Tumor generation code will be release in a few months or please make a request to Dr. Zongwei Zhou ([zzhou82@jh.edu](mailto:zzhou82@jh.edu)).
 
 ## Paper
@@ -21,3 +23,6 @@ Medical Imaging Meets NeurIPS, 2022 <br/>
 - [ ] Make a video about Visual Turing Test (will appear in YouTube)
 - [ ] Apply for a US patent
 
+## Acknowledgement
+
+This work was supported by the Lustgarten Foundation for Pancreatic Cancer Research. The segmentation model is based on [Swin UNETR](https://github.com/Project-MONAI/tutorials/blob/main/3d_segmentation/swin_unetr_btcv_segmentation_3d.ipynb); we appreciate the effort of the authors for providing open source code to the community.
