@@ -9,7 +9,7 @@ Tumor generation code will be release in a few months or please make a request t
 ## Paper
 
 <b>Synthetic Tumors Make AI Segment Tumors Better</b> <br/>
-[Qixin Hu]()<sup>1</sup>, [Junfei Xiao](https://lambert-x.github.io/)<sup>2</sup>, [Yixiong Chen](https://scholar.google.com/citations?hl=en&user=bVHYVXQAAAAJ)<sup>3</sup>, Shuwen Sun<sup>4</sup>, [Jie-Neng Chen](https://scholar.google.com/citations?hl=en&user=yLYj88sAAAAJ)<sup>2</sup>, [Alan L. Yuille](https://www.cs.jhu.edu/~ayuille/)<sup>2</sup>, and [Zongwei Zhou](https://www.zongweiz.com/)<sup>2,*</sup> <br/>
+Qixin Hu<sup>1</sup>, [Junfei Xiao](https://lambert-x.github.io/)<sup>2</sup>, [Yixiong Chen](https://scholar.google.com/citations?hl=en&user=bVHYVXQAAAAJ)<sup>3</sup>, Shuwen Sun<sup>4</sup>, [Jie-Neng Chen](https://scholar.google.com/citations?hl=en&user=yLYj88sAAAAJ)<sup>2</sup>, [Alan L. Yuille](https://www.cs.jhu.edu/~ayuille/)<sup>2</sup>, and [Zongwei Zhou](https://www.zongweiz.com/)<sup>2,*</sup> <br/>
 <sup>1 </sup>Huazhong University of Science and Technology,   <sup>2 </sup>Johns Hopkins University, <br/>
 <sup>3 </sup>Fudan University,   <sup>4 </sup>The First Affiliated Hospital of Nanjing Medical University <br/>
 Medical Imaging Meets NeurIPS, 2022 <br/>
