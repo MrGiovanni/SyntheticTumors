@@ -13,7 +13,7 @@ Tumor generation code will be release in a few months or please make a request t
 <sup>1 </sup>Huazhong University of Science and Technology,   <sup>2 </sup>Johns Hopkins University, <br/>
 <sup>3 </sup>Fudan University,   <sup>4 </sup>The First Affiliated Hospital of Nanjing Medical University <br/>
 Medical Imaging Meets NeurIPS, 2022 <br/>
-[paper]() | [code](https://github.com/MrGiovanni/SyntheticTumors) | [slides]() | [demo]()
+[paper](https://arxiv.org/pdf/2210.14845.pdf) | [code](https://github.com/MrGiovanni/SyntheticTumors) | [slides]() | [demo]()
 
 ## TODO
 
