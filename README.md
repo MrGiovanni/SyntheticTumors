@@ -23,6 +23,17 @@ Medical Imaging Meets NeurIPS, 2022 <br/>
 - [ ] Make a video about Visual Turing Test (will appear in YouTube)
 - [ ] Apply for a US patent
 
+## Citation
+
+```
+@article{hu2022synthetic,
+  title={Synthetic Tumors Make AI Segment Tumors Better},
+  author={Hu, Qixin and Xiao, Junfei and Chen, Yixiong and Sun, Shuwen and Chen, Jie-Neng and Yuille, Alan and Zhou, Zongwei},
+  journal={arXiv preprint arXiv:2210.14845},
+  year={2022}
+}
+```
+
 ## Acknowledgement
 
 This work was supported by the Lustgarten Foundation for Pancreatic Cancer Research. The segmentation model is based on [Swin UNETR](https://github.com/Project-MONAI/tutorials/blob/main/3d_segmentation/swin_unetr_btcv_segmentation_3d.ipynb); we appreciate the effort of the authors for providing open source code to the community.
