@@ -21,6 +21,7 @@ Medical Imaging Meets NeurIPS, 2022 <br/>
 
 - [x] Upload the paper to arxiv
 - [ ] Make a video about Visual Turing Test (will appear in YouTube)
+- [ ] Make an online app for Visual Turing Test
 - [ ] Apply for a US patent
 
 ## Citation
