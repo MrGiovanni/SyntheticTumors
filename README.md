@@ -19,7 +19,11 @@ Medical Imaging Meets NeurIPS, 2022 <br/>
 
 ## Preparation
 
-#### Datasets
+```bash
+git clone https://github.com/MrGiovanni/SyntheticTumors.git
+```
+
+#### Dataset
 
 please download these datasets and save to `<data-path>` (user-defined).
 
