@@ -6,8 +6,6 @@ This repository provides extensive examples of synthetic liver tumors generated 
 
 <p align="center"><img width="100%" src="figures/VisualTuringTest.png" /></p>
 
-Tumor generation code will be release in a few months or please make a request to Dr. Zongwei Zhou ([zzhou82@jh.edu](mailto:zzhou82@jh.edu)).
-
 ## Paper
 
 <b>Synthetic Tumors Make AI Segment Tumors Better</b> <br/>
@@ -65,7 +63,8 @@ CUDA_VISIBLE_DEVICES=0 python -W ignore -W ignore main.py --optim_lr=4e-4 --batc
 ## 2. Train Swin UNETR using synthetic liver tumors
 
 ```
-coming soon.
+# UNETR-Tiny (no.pretrain)
+CUDA_VISIBLE_DEVICES=6 python -W ignore main.py --optim_lr=4e-4 --batch_size=2 --feature_size=12 --lrschedule=warmup_cosine --optim_name=adamw --model_name=swin_unetrv2 --val_every=200 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12230 --cache_num=240 --val_overlap=0.5 --syn --logdir="runs/lits_synthetic.no_pretrain.swin_unetrv2_tiny" --train_dir /mnt/zzhou82/PublicAbdominalData --val_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --json_dir datafolds/healthy.json
 ```
 
 ## TODO
