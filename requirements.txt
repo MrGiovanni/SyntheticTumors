@@ -1,0 +1,15 @@
+monai==0.9.0
+nibabel
+tensorboard
+tensorboardX
+ml-collections
+einops
+timm
+opencv-python
+elasticdeform
+numpy
+nibabel
+scipy
+tqdm
+matplotlib
+pandas
