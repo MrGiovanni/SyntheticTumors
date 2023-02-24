@@ -79,18 +79,26 @@ CUDA_VISIBLE_DEVICES=0 python -W ignore main.py --optim_lr=4e-4 --batch_size=2 -
 #### Swin UNETR trained by real tumors
 
 ```
+# UNETR-Base (pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --feature_size=48 --val_overlap=0.75 --val_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --json_dir datafolds/lits.json --log_dir runs/lits_real.pretrain.swin_unetrv2_base --save_dir out
+# UNETR-Base (no.pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --feature_size=48 --val_overlap=0.75 --val_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --json_dir datafolds/lits.json --log_dir runs/lits_real.no_pretrain.swin_unetrv2_base --save_dir out
+# UNETR-Small (no.pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --feature_size=24 --val_overlap=0.75 --val_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --json_dir datafolds/lits.json --log_dir runs/lits_real.no_pretrain.swin_unetrv2_small --save_dir out
+# UNETR-Tiny (no.pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --feature_size=12 --val_overlap=0.75 --val_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --json_dir datafolds/lits.json --log_dir runs/lits_real.no_pretrain.swin_unetrv2_tiny --save_dir out
 ```
 
 #### Swin UNETR trained by synthetic tumors
 
 ```
+# UNETR-Base (pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --feature_size=48 --val_overlap=0.75 --val_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --json_dir datafolds/lits.json --log_dir runs/lits_synthetic.pretrain.swin_unetrv2_base --save_dir out
+# UNETR-Base (no.pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --feature_size=48 --val_overlap=0.75 --val_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --json_dir datafolds/lits.json --log_dir runs/lits_synthetic.no_pretrain.swin_unetrv2_base --save_dir out
+# UNETR-Small (no.pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --feature_size=24 --val_overlap=0.75 --val_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --json_dir datafolds/lits.json --log_dir runs/lits_synthetic.no_pretrain.swin_unetrv2_small --save_dir out
+# UNETR-Tiny (no.pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --feature_size=12 --val_overlap=0.75 --val_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --json_dir datafolds/lits.json --log_dir runs/lits_synthetic.no_pretrain.swin_unetrv2_tiny --save_dir out
 ```
 
