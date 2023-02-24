@@ -50,10 +50,10 @@ pip install -r requirements.txt
 ## 1. Train Swin UNETR using real liver tumors
 
 ```
-# UNETR-Base (no.pretrain)
-CUDA_VISIBLE_DEVICES=0 python -W ignore -W ignore main.py --optim_lr=4e-4 --batch_size=2 --feature_size=48 --lrschedule=warmup_cosine --optim_name=adamw --model_name=swin_unetrv2 --val_every=200 --val_overlap 0.5 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12231 --cache_num=240 --logdir="runs/lits_real.no_pretrain.swin_unetrv2_base" --train_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --val_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --json_dir datafolds/lits.json
 # UNETR-Base (pretrain)
-CUDA_VISIBLE_DEVICES=0 python -W ignore -W ignore main.py --optim_lr=4e-4 --batch_size=2 --feature_size=48 --lrschedule=warmup_cosine --optim_name=adamw --model_name=swin_unetrv2 --val_every=200 --val_overlap 0.5 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12232 --cache_num=240 --logdir="runs/lits_real.pretrain.swin_unetrv2_base" --train_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --val_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --json_dir datafolds/lits.json --use_pretrained
+CUDA_VISIBLE_DEVICES=0 python -W ignore -W ignore main.py --optim_lr=4e-4 --batch_size=2 --feature_size=48 --lrschedule=warmup_cosine --optim_name=adamw --model_name=swin_unetrv2 --val_every=200 --val_overlap 0.5 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12231 --cache_num=240 --logdir="runs/lits_real.pretrain.swin_unetrv2_base" --train_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --val_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --json_dir datafolds/lits.json --use_pretrained
+# UNETR-Base (no.pretrain)
+CUDA_VISIBLE_DEVICES=0 python -W ignore -W ignore main.py --optim_lr=4e-4 --batch_size=2 --feature_size=48 --lrschedule=warmup_cosine --optim_name=adamw --model_name=swin_unetrv2 --val_every=200 --val_overlap 0.5 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12232 --cache_num=240 --logdir="runs/lits_real.no_pretrain.swin_unetrv2_base" --train_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --val_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --json_dir datafolds/lits.json
 # UNETR-Small (no.pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore -W ignore main.py --optim_lr=4e-4 --batch_size=2 --feature_size=24 --lrschedule=warmup_cosine --optim_name=adamw --model_name=swin_unetrv2 --val_every=200 --val_overlap 0.5 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12233 --cache_num=240 --logdir="runs/lits_real.no_pretrain.swin_unetrv2_small" --train_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --val_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --json_dir datafolds/lits.json
 # UNETR-Tiny (no.pretrain)
@@ -63,8 +63,14 @@ CUDA_VISIBLE_DEVICES=0 python -W ignore -W ignore main.py --optim_lr=4e-4 --batc
 ## 2. Train Swin UNETR using synthetic liver tumors
 
 ```
+# UNETR-Base (pretrain)
+CUDA_VISIBLE_DEVICES=0 python -W ignore main.py --optim_lr=4e-4 --batch_size=2 --feature_size=48 --lrschedule=warmup_cosine --optim_name=adamw --model_name=swin_unetrv2 --val_every=200 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12230 --cache_num=240 --val_overlap=0.5 --syn --logdir="runs/lits_synthetic.pretrain.swin_unetrv2_base" --train_dir /mnt/zzhou82/PublicAbdominalData --val_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --json_dir datafolds/healthy.json --use_pretrained
+# UNETR-Base (no.pretrain)
+CUDA_VISIBLE_DEVICES=0 python -W ignore main.py --optim_lr=4e-4 --batch_size=2 --feature_size=48 --lrschedule=warmup_cosine --optim_name=adamw --model_name=swin_unetrv2 --val_every=200 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12230 --cache_num=240 --val_overlap=0.5 --syn --logdir="runs/lits_synthetic.no_pretrain.swin_unetrv2_base" --train_dir /mnt/zzhou82/PublicAbdominalData --val_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --json_dir datafolds/healthy.json
+# UNETR-Small (no.pretrain)
+CUDA_VISIBLE_DEVICES=0 python -W ignore main.py --optim_lr=4e-4 --batch_size=2 --feature_size=24 --lrschedule=warmup_cosine --optim_name=adamw --model_name=swin_unetrv2 --val_every=200 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12230 --cache_num=240 --val_overlap=0.5 --syn --logdir="runs/lits_synthetic.no_pretrain.swin_unetrv2_small" --train_dir /mnt/zzhou82/PublicAbdominalData --val_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --json_dir datafolds/healthy.json
 # UNETR-Tiny (no.pretrain)
-CUDA_VISIBLE_DEVICES=6 python -W ignore main.py --optim_lr=4e-4 --batch_size=2 --feature_size=12 --lrschedule=warmup_cosine --optim_name=adamw --model_name=swin_unetrv2 --val_every=200 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12230 --cache_num=240 --val_overlap=0.5 --syn --logdir="runs/lits_synthetic.no_pretrain.swin_unetrv2_tiny" --train_dir /mnt/zzhou82/PublicAbdominalData --val_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --json_dir datafolds/healthy.json
+CUDA_VISIBLE_DEVICES=0 python -W ignore main.py --optim_lr=4e-4 --batch_size=2 --feature_size=12 --lrschedule=warmup_cosine --optim_name=adamw --model_name=swin_unetrv2 --val_every=200 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12230 --cache_num=240 --val_overlap=0.5 --syn --logdir="runs/lits_synthetic.no_pretrain.swin_unetrv2_tiny" --train_dir /mnt/zzhou82/PublicAbdominalData --val_dir /mnt/zzhou82/PublicAbdominalData/04_LiTS --json_dir datafolds/healthy.json
 ```
 
 ## TODO
