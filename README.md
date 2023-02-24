@@ -19,6 +19,7 @@ Medical Imaging Meets NeurIPS, 2022 <br/>
 
 ```bash
 git clone https://github.com/MrGiovanni/SyntheticTumors.git
+wget https://github.com/Project-MONAI/MONAI-extra-test-data/releases/download/0.8.1/model_swinvit.pt
 ```
 
 #### Dataset
