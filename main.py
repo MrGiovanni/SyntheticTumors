@@ -126,7 +126,6 @@ parser.add_argument('--val_dir', default=None, type=str)
 parser.add_argument('--json_dir', default=None, type=str)
 parser.add_argument('--cache_num', default=500, type=int)
 
-
 parser.add_argument('--use_pretrained', action='store_true')
 
 def optuna_objective(trial, args):
