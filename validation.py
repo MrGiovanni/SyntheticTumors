@@ -31,8 +31,8 @@ parser.add_argument('--feature_size', default=16, type=int)
 parser.add_argument('--val_overlap', default=0.5, type=float)
 parser.add_argument('--num_classes', default=3, type=int)
 
-parser.add_argument('--model', default='swin_unetrv2', type=str)
-
+parser.add_argument('--model', default='unet', type=str)
+parser.add_argument('--swin_type', default='tiny', type=str)
 
 def denoise_pred(pred: np.ndarray):
     """
@@ -79,25 +79,21 @@ def _get_model(args):
     inf_size = [96, 96, 96]
     print(args.model)
     if args.model == 'swin_unetrv2':
+        if args.swin_type == 'tiny':
+            feature_size=12
+        elif args.swin_type == 'small':
+            feature_size=24
+        elif args.swin_type == 'base':
+            feature_size=48
+
         model = SwinUNETR_v2(in_channels=1,
-                            out_channels=3,
-                            img_size=(96, 96, 96),
-                            feature_size=args.feature_size,
-                            patch_size=2,
-                            depths=[2, 2, 2, 2],
-                            num_heads=[3, 6, 12, 24],
-                            window_size=[7, 7, 7])
-    
-    elif args.model == 'segresnet_monai':
-        from monai.networks.nets import SegResNet as SegResNetMonai
-        model = SegResNetMonai(
-            blocks_down=(1, 2, 2, 4),
-            blocks_up=(1, 1, 1),
-            init_filters=16,
-            in_channels=1,
-            out_channels=3,
-            dropout_prob=0.0
-        )
+                          out_channels=3,
+                          img_size=(96, 96, 96),
+                          feature_size=feature_size,
+                          patch_size=2,
+                          depths=[2, 2, 2, 2],
+                          num_heads=[3, 6, 12, 24],
+                          window_size=[7, 7, 7])
         
     elif args.model == 'unet':
         from monai.networks.nets import UNet 
@@ -110,14 +106,9 @@ def _get_model(args):
                     num_res_units=2,
                 )
     
-    elif args.model == 'unetpp':
-        from networks.basicunetplusplus import BasicUNetPlusPlus as UNetPlusPlus
-        model = UNetPlusPlus(
-                    spatial_dims=3,
-                    in_channels=1,
-                    out_channels=3,
-                    features=(32, 32, 64, 128, 256, 32)
-        )     
+    else:
+        raise ValueError('Unsupported model ' + str(args.model))
+
 
     if args.checkpoint:
         checkpoint = torch.load(os.path.join(args.log_dir, 'model.pt'), map_location='cpu')

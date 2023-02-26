@@ -39,7 +39,7 @@ import argparse
 parser = argparse.ArgumentParser(description='brats21 segmentation testing')
 
 parser.add_argument('--syn',action='store_true')
-parser.add_argument('--fold', default=0, type=int)
+# parser.add_argument('--fold', default=0, type=int)
 parser.add_argument('--checkpoint', default=None)
 parser.add_argument('--logdir', default=None)
 parser.add_argument('--save_checkpoint', action='store_true')
@@ -67,6 +67,7 @@ parser.add_argument('--workers', default=4, type=int)
 
 
 parser.add_argument('--model_name', default='unet', type=str)
+parser.add_argument('--swin_type', default='tiny', type=str)
 
 #segmentation flex params
 parser.add_argument('--seg_block', default='basic_pre', type=str)
@@ -100,7 +101,7 @@ parser.add_argument('--warmup_steps', default=500, type=int)
 parser.add_argument('--num_heads', default=16, type=int)
 parser.add_argument('--mlp_dim', default=3072, type=int)
 parser.add_argument('--hidden_size', default=768, type=int)
-parser.add_argument('--feature_size', default=16, type=int)
+# parser.add_argument('--feature_size', default=12, type=int)
 parser.add_argument('--in_channels', default=1, type=int)
 parser.add_argument('--out_channels', default=3, type=int)
 parser.add_argument('--num_classes', default=3, type=int)
@@ -408,98 +409,7 @@ def main_worker(gpu, args):
     train_transform, val_transform = _get_transform(args)
 
     ## NETWORK
-    if (args.model_name is None) or args.model_name == 'unetr':
-        from monai.networks.nets import UNETR
-        # model = UNETR(
-        #     in_channels=1,
-        #     out_channels=3,
-        #     img_size=(args.roi_x, args.roi_y, args.roi_z),
-        #     feature_size=32,
-        #     hidden_size=args.hidden_size,
-        #     mlp_dim=args.mlp_dim,
-        #     num_heads=args.num_heads,
-        #     pos_embed=args.pos_embedd,
-        #     norm_name=args.norm_name,
-        #     conv_block=True,
-        #     res_block=True,
-        #     dropout_rate=0.0)
-        model = UNETR(
-                in_channels=1,
-                out_channels=3,
-                img_size=(args.roi_x, args.roi_y, args.roi_z),
-                feature_size=16,
-                hidden_size=768,
-                mlp_dim=3072,
-                num_heads=12,
-                pos_embed="perceptron",
-                norm_name="instance",
-                res_block=True,
-                dropout_rate=0.0,
-            )
-        # if args.pretrainViT:
-        #     args.pretrainedViT_dir = './networks/model_MTK1-3_dataset1-7_156000.pt'
-        #     model.load_from(weights=torch.load(args.pretrainedViT_dir))
-        # print('Use pretrained ViT weights')
-
-        # if args.resume_ckpt:
-        #     model_dict = torch.load(args.pretrained_dir)
-        #     model.load_state_dict(model_dict['state_dict'])
-        #     print('Use pretrained weights')
-
-    elif args.model_name == 'swin_unetr':
-
-        model = SwinUNETR(in_channels=1,
-                          out_channels=3,
-                          img_size=(96, 96, 96),
-                          feature_size=args.feature_size,
-                          patch_size=2,
-                          depths=[2, 2, 2, 2],
-                          num_heads=[3, 6, 12, 24],
-                          window_size=[7, 7, 7])
-
-    elif args.model_name == 'swin_unetrv2':
-
-        model = SwinUNETR_v2(in_channels=1,
-                          out_channels=3,
-                          img_size=(96, 96, 96),
-                          feature_size=args.feature_size,
-                          patch_size=2,
-                          depths=[2, 2, 2, 2],
-                          num_heads=[3, 6, 12, 24],
-                          window_size=[7, 7, 7])
-        
-        if args.use_pretrained:
-            pretrained_add = '/workspace/Ali/MSD/Task07Pancreas_metric_v830/pretrained_models/model_swinvit.pt'
-            model.load_from(weights=torch.load(pretrained_add))
-            print('Use pretrained ViT weights from: {}'.format(pretrained_add))
-        
-    elif args.model_name == 'segresnet_monai':
-
-        from monai.networks.nets import SegResNet as SegResNetMonai
-        model = SegResNetMonai(
-            blocks_down=(1, 2, 2, 4),
-            blocks_up=(1, 1, 1),
-            init_filters=args.seg_base_filters,
-            in_channels=1,
-            out_channels=3,
-            dropout_prob=args.dropout_prob
-        )
-
-
-    elif args.model_name == 'segresnet':
-
-        from resnet_flex import SegResNet
-        model = SegResNet(block=args.seg_block,
-                          num_blocks=num_blocks,
-                          base_filters=args.seg_base_filters,
-                          relu=args.seg_relu,
-                          mode=args.seg_mode,
-                          use_se=args.seg_use_se,
-                          norm=args.seg_norm_name,
-                          norm_param={'num_groups': 8},
-                          in_channels=4, num_classes=3, dim=3)
-        
-    elif args.model_name == 'unet':
+    if (args.model_name is None) or args.model_name == 'unet':
         from monai.networks.nets import UNet 
         model = UNet(
                     spatial_dims=3,
@@ -509,17 +419,30 @@ def main_worker(gpu, args):
                     strides=(2, 2, 2, 2),
                     num_res_units=2,
                 )
-    
-    elif args.model_name == 'unetpp':
-        # from monai.networks.nets import BasicUnetPlusPlus as UNetPlusPlus
-        from networks.basicunetplusplus import BasicUNetPlusPlus as UNetPlusPlus
-        model = UNetPlusPlus(
-                    spatial_dims=3,
-                    in_channels=1,
-                    out_channels=3,
-                    features=(32, 32, 64, 128, 256, 32)
-        )
+        
+    elif args.model_name == 'swin_unetrv2':
+        
+        if args.swin_type == 'tiny':
+            feature_size=12
+        elif args.swin_type == 'small':
+            feature_size=24
+        elif args.swin_type == 'base':
+            feature_size=48
 
+        model = SwinUNETR_v2(in_channels=1,
+                          out_channels=3,
+                          img_size=(96, 96, 96),
+                          feature_size=feature_size,
+                          patch_size=2,
+                          depths=[2, 2, 2, 2],
+                          num_heads=[3, 6, 12, 24],
+                          window_size=[7, 7, 7])
+        
+        if args.use_pretrained:
+            pretrained_add = 'model_swinvit.pt'
+            model.load_from(weights=torch.load(pretrained_add))
+            print('Use pretrained ViT weights from: {}'.format(pretrained_add))
+        
     else:
         raise ValueError('Unsupported model ' + str(args.model_name))
         
