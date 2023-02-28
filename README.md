@@ -117,7 +117,9 @@ CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --model=swin_unetrv2 --swi
 - [ ] Make a video about Visual Turing Test (will appear in YouTube)
 - [ ] Make an online app for Visual Turing Test
 - [x] Apply for a US patent
-- [ ] Make a Jupter Notebook for tumor synthesis
+- [ ] Upload the evaluation code for small tumors
+- [ ] Upload the evaluation code for the false-positive study
+- [ ] Make a Jupyter Notebook for tumor synthesis
 
 ## Citation
 
