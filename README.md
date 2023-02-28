@@ -13,14 +13,14 @@ This repository provides extensive examples of synthetic liver tumors generated 
 <sup>1 </sup>Huazhong University of Science and Technology,  <sup>2 </sup>Fudan University,  <br/>
 <sup>3 </sup>Johns Hopkins University,   <sup>4 </sup>The First Affiliated Hospital of Nanjing Medical University <br/>
 CVPR, 2023 <br/>
-paper | [code](https://github.com/MrGiovanni/SyntheticTumors) | slides | demo
+paper | [code](https://github.com/MrGiovanni/SyntheticTumors)
 
 <b>Synthetic Tumors Make AI Segment Tumors Better</b> <br/>
 [Qixin Hu](https://scholar.google.com/citations?user=EqD5GP8AAAAJ&hl=en)<sup>1</sup>, [Junfei Xiao](https://lambert-x.github.io/)<sup>2</sup>, [Yixiong Chen](https://scholar.google.com/citations?hl=en&user=bVHYVXQAAAAJ)<sup>3</sup>, Shuwen Sun<sup>4</sup>, [Jie-Neng Chen](https://scholar.google.com/citations?hl=en&user=yLYj88sAAAAJ)<sup>2</sup>, [Alan L. Yuille](https://www.cs.jhu.edu/~ayuille/)<sup>2</sup>, and [Zongwei Zhou](https://www.zongweiz.com/)<sup>2,*</sup> <br/>
 <sup>1 </sup>Huazhong University of Science and Technology,   <sup>2 </sup>Johns Hopkins University, <br/>
 <sup>3 </sup>Fudan University,   <sup>4 </sup>The First Affiliated Hospital of Nanjing Medical University <br/>
 Medical Imaging Meets NeurIPS, 2022 <br/>
-[paper](https://arxiv.org/pdf/2210.14845.pdf) | [code](https://github.com/MrGiovanni/SyntheticTumors) | [slides]() | [poster]() demo | [talk](https://www.youtube.com/watch?v=bJpI9tCTsuA)
+[paper](https://arxiv.org/pdf/2210.14845.pdf) | [code](https://github.com/MrGiovanni/SyntheticTumors) | [slides](https://github.com/MrGiovanni/SyntheticTumors/blob/main/documents/slides.pdf) | [poster](https://github.com/MrGiovanni/SyntheticTumors/blob/main/documents/poster.pdf) | demo | [talk](https://www.youtube.com/watch?v=bJpI9tCTsuA)
 
 ## 0. Preparation
 
