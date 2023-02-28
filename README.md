@@ -22,12 +22,15 @@ paper | [code](https://github.com/MrGiovanni/SyntheticTumors)
 Medical Imaging Meets NeurIPS, 2022 <br/>
 [paper](https://arxiv.org/pdf/2210.14845.pdf) | [code](https://github.com/MrGiovanni/SyntheticTumors) | [slides](https://github.com/MrGiovanni/SyntheticTumors/blob/main/documents/slides.pdf) | [poster](https://github.com/MrGiovanni/SyntheticTumors/blob/main/documents/poster.pdf) | demo | [talk](https://www.youtube.com/watch?v=bJpI9tCTsuA)
 
-## 0. Preparation
+## 0. Installation
+
 
 ```bash
 git clone https://github.com/MrGiovanni/SyntheticTumors.git
 wget https://github.com/Project-MONAI/MONAI-extra-test-data/releases/download/0.8.1/model_swinvit.pt
 ```
+
+See [installation instructions]().
 
 #### Dataset
 
