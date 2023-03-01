@@ -21,7 +21,7 @@ paper | [code](https://github.com/MrGiovanni/SyntheticTumors)
 <sup>3 </sup>Fudan University,   <sup>4 </sup>The First Affiliated Hospital of Nanjing Medical University <br/>
 Medical Imaging Meets NeurIPS, 2022 <br/>
 [paper](https://arxiv.org/pdf/2210.14845.pdf) | [code](https://github.com/MrGiovanni/SyntheticTumors) | [slides](https://github.com/MrGiovanni/SyntheticTumors/blob/main/documents/slides.pdf) | [poster](https://github.com/MrGiovanni/SyntheticTumors/blob/main/documents/poster.pdf) | demo | [talk](https://www.youtube.com/watch?v=bJpI9tCTsuA)
-
+   
 ## 0. Installation
 
 
