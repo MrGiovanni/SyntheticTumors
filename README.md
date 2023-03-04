@@ -34,13 +34,13 @@ See [installation instructions](https://github.com/MrGiovanni/SyntheticTumors/bl
 ## 1. Train AI model using real liver tumors
 
 ```
-# UNETR-Base (pretrain)
+# Swin-UNETR-Base (pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore -W ignore main.py --optim_lr=4e-4 --batch_size=2 --lrschedule=warmup_cosine --optim_name=adamw --model_name=swin_unetrv2 --swin_type=base --val_every=200 --val_overlap 0.2 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12231 --cache_num=200 --logdir="runs/lits_real.pretrain.swin_unetrv2_base" --train_dir <data-path> --val_dir <data-path> --json_dir datafolds/lits.json --use_pretrained
-# UNETR-Base (no.pretrain)
+# Swin-UNETR-Base (no.pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore -W ignore main.py --optim_lr=4e-4 --batch_size=2 --lrschedule=warmup_cosine --optim_name=adamw --model_name=swin_unetrv2 --swin_type=base --val_every=200 --val_overlap 0.2 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12232 --cache_num=200 --logdir="runs/lits_real.no_pretrain.swin_unetrv2_base" --train_dir <data-path> --val_dir <data-path> --json_dir datafolds/lits.json
-# UNETR-Small (no.pretrain)
+# Swin-UNETR-Small (no.pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore -W ignore main.py --optim_lr=4e-4 --batch_size=2 --lrschedule=warmup_cosine --optim_name=adamw --model_name=swin_unetrv2 --swin_type=small --val_every=200 --val_overlap 0.2 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12233 --cache_num=200 --logdir="runs/lits_real.no_pretrain.swin_unetrv2_small" --train_dir <data-path> --val_dir <data-path> --json_dir datafolds/lits.json
-# UNETR-Tiny (no.pretrain)
+# Swin-UNETR-Tiny (no.pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore -W ignore main.py --optim_lr=4e-4 --batch_size=2 --lrschedule=warmup_cosine --optim_name=adamw --model_name=swin_unetrv2 --swin_type=tiny --val_every=200 --val_overlap 0.2 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12234 --cache_num=200 --logdir="runs/lits_real.no_pretrain.swin_unetrv2_tiny" --train_dir <data-path> --val_dir <data-path> --json_dir datafolds/lits.json
 
 # UNET (no.pretrain)
