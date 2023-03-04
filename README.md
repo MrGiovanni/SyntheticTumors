@@ -31,7 +31,7 @@ wget https://github.com/Project-MONAI/MONAI-extra-test-data/releases/download/0.
 
 See [installation instructions](https://github.com/MrGiovanni/SyntheticTumors/blob/main/INSTALL.md).
 
-## 1. Train Swin UNETR using real liver tumors
+## 1. Train AI model using real liver tumors
 
 ```
 # UNETR-Base (pretrain)
@@ -42,47 +42,59 @@ CUDA_VISIBLE_DEVICES=0 python -W ignore -W ignore main.py --optim_lr=4e-4 --batc
 CUDA_VISIBLE_DEVICES=0 python -W ignore -W ignore main.py --optim_lr=4e-4 --batch_size=2 --lrschedule=warmup_cosine --optim_name=adamw --model_name=swin_unetrv2 --swin_type=small --val_every=200 --val_overlap 0.2 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12233 --cache_num=200 --logdir="runs/lits_real.no_pretrain.swin_unetrv2_small" --train_dir <data-path> --val_dir <data-path> --json_dir datafolds/lits.json
 # UNETR-Tiny (no.pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore -W ignore main.py --optim_lr=4e-4 --batch_size=2 --lrschedule=warmup_cosine --optim_name=adamw --model_name=swin_unetrv2 --swin_type=tiny --val_every=200 --val_overlap 0.2 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12234 --cache_num=200 --logdir="runs/lits_real.no_pretrain.swin_unetrv2_tiny" --train_dir <data-path> --val_dir <data-path> --json_dir datafolds/lits.json
+
+# UNET (no.pretrain)
+CUDA_VISIBLE_DEVICES=0 python -W ignore -W ignore main.py --optim_lr=4e-4 --batch_size=2 --lrschedule=warmup_cosine --optim_name=adamw --model_name=unet --val_every=200 --val_overlap 0.2 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12235 --cache_num=200 --logdir="runs/lits_real.no_pretrain.unet" --train_dir <data-path> --val_dir <data-path> --json_dir datafolds/lits.json
 ```
 
-## 2. Train Swin UNETR using synthetic liver tumors
+## 2. Train AI model using synthetic liver tumors
 
 ```
-# UNETR-Base (pretrain)
+# Swin-UNETR-Base (pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore main.py --optim_lr=4e-4 --batch_size=2 --lrschedule=warmup_cosine --optim_name=adamw --model_name=swin_unetrv2 --swin_type=base --val_every=200 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12231 --cache_num=200 --val_overlap=0.2 --syn --logdir="runs/lits_synthetic.pretrain.swin_unetrv2_base" --train_dir <data-path> --val_dir <data-path> --json_dir datafolds/healthy.json --use_pretrained
-# UNETR-Base (no.pretrain)
+# Swin-UNETR-Base (no.pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore main.py --optim_lr=4e-4 --batch_size=2 --lrschedule=warmup_cosine --optim_name=adamw --model_name=swin_unetrv2 --swin_type=base --val_every=200 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12231 --cache_num=200 --val_overlap=0.2 --syn --logdir="runs/lits_synthetic.no_pretrain.swin_unetrv2_base" --train_dir <data-path> --val_dir <data-path> --json_dir datafolds/healthy.json
-# UNETR-Small (no.pretrain)
+# Swin-UNETR-Small (no.pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore main.py --optim_lr=4e-4 --batch_size=2 --lrschedule=warmup_cosine --optim_name=adamw --model_name=swin_unetrv2 --swin_type=small --val_every=200 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12233 --cache_num=200 --val_overlap=0.2 --syn --logdir="runs/lits_synthetic.no_pretrain.swin_unetrv2_small" --train_dir <data-path> --val_dir <data-path> --json_dir datafolds/healthy.json
-# UNETR-Tiny (no.pretrain)
-CUDA_VISIBLE_DEVICES=0 python -W ignore main.py --optim_lr=4e-4 --batch_size=2 --lrschedule=warmup_cosine --optim_name=adamw --model_name=swin_unetrv2 --swin_type=tiny --val_every=200 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12234 --cache_num=240 --val_overlap=0.2 --syn --logdir="runs/lits_synthetic.no_pretrain.swin_unetrv2_tiny" --train_dir <data-path> --val_dir <data-path> --json_dir datafolds/healthy.json
+# Swin-UNETR-Tiny (no.pretrain)
+CUDA_VISIBLE_DEVICES=0 python -W ignore main.py --optim_lr=4e-4 --batch_size=2 --lrschedule=warmup_cosine --optim_name=adamw --model_name=swin_unetrv2 --swin_type=tiny --val_every=200 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12234 --cache_num=200 --val_overlap=0.2 --syn --logdir="runs/lits_synthetic.no_pretrain.swin_unetrv2_tiny" --train_dir <data-path> --val_dir <data-path> --json_dir datafolds/healthy.json
+
+# UNET (no.pretrain)
+CUDA_VISIBLE_DEVICES=0 python -W ignore main.py --optim_lr=4e-4 --batch_size=2 --lrschedule=warmup_cosine --optim_name=adamw --model_name=unet --val_every=200 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12235 --cache_num=200 --val_overlap=0.2 --syn --logdir="runs/lits_synthetic.no_pretrain.unet" --train_dir <data-path> --val_dir <data-path> --json_dir datafolds/healthy.json
 ```
 
 ## 3. Evaluation
 
-#### Swin UNETR trained by real tumors
+#### AI model trained by real tumors
 
 ```
-# UNETR-Base (pretrain)
+# Swin-UNETR-Base (pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --model=swin_unetrv2 --swin_type=base --val_overlap=0.75 --val_dir <data-path> --json_dir datafolds/lits.json --log_dir runs/lits_real.pretrain.swin_unetrv2_base --save_dir out
-# UNETR-Base (no.pretrain)
+# Swin-UNETR-Base (no.pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --model=swin_unetrv2 --swin_type=base --val_overlap=0.75 --val_dir <data-path> --json_dir datafolds/lits.json --log_dir runs/lits_real.no_pretrain.swin_unetrv2_base --save_dir out
-# UNETR-Small (no.pretrain)
+# Swin-UNETR-Small (no.pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --model=swin_unetrv2 --swin_type=small --val_overlap=0.75 --val_dir <data-path> --json_dir datafolds/lits.json --log_dir runs/lits_real.no_pretrain.swin_unetrv2_small --save_dir out
-# UNETR-Tiny (no.pretrain)
+# Swin-UNETR-Tiny (no.pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --model=swin_unetrv2 --swin_type=tiny --val_overlap=0.75 --val_dir <data-path> --json_dir datafolds/lits.json --log_dir runs/lits_real.no_pretrain.swin_unetrv2_tiny --save_dir out
+
+# UNET (no.pretrain)
+CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --model=unet --val_overlap=0.75 --val_dir <data-path> --json_dir datafolds/lits.json --log_dir runs/lits_real.no_pretrain.unet --save_dir out
 ```
 
-#### Swin UNETR trained by synthetic tumors
+#### AI model trained by synthetic tumors
 
 ```
-# UNETR-Base (pretrain)
+# Swin-UNETR-Base (pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --model=swin_unetrv2 --swin_type=base --val_overlap=0.75 --val_dir <data-path> --json_dir datafolds/lits.json --log_dir runs/lits_synthetic.pretrain.swin_unetrv2_base --save_dir out
-# UNETR-Base (no.pretrain)
+# Swin-UNETR-Base (no.pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --model=swin_unetrv2 --swin_type=base --val_overlap=0.75 --val_dir <data-path> --json_dir datafolds/lits.json --log_dir runs/lits_synthetic.no_pretrain.swin_unetrv2_base --save_dir out
-# UNETR-Small (no.pretrain)
+# Swin-UNETR-Small (no.pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --model=swin_unetrv2 --swin_type=small --val_overlap=0.75 --val_dir <data-path> --json_dir datafolds/lits.json --log_dir runs/lits_synthetic.no_pretrain.swin_unetrv2_small --save_dir out
-# UNETR-Tiny (no.pretrain)
+# Swin-UNETR-Tiny (no.pretrain)
 CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --model=swin_unetrv2 --swin_type=tiny --val_overlap=0.75 --val_dir <data-path> --json_dir datafolds/lits.json --log_dir runs/lits_synthetic.no_pretrain.swin_unetrv2_tiny --save_dir out
+
+# UNET (no.pretrain)
+CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --model=unet --val_overlap=0.75 --val_dir <data-path> --json_dir datafolds/lits.json --log_dir runs/lits_synthetic.no_pretrain.unet --save_dir out
 ```
 
 ## TODO
