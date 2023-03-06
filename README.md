@@ -5,6 +5,7 @@ This repository provides extensive examples of synthetic liver tumors generated 
 **Amazing**, right? 
 
 <p align="center"><img width="100%" src="figures/VisualTuringTest.png" /></p>
+<p align="center"><img width="100%" src="figures/Examples.gif" /></p>
 
 ## Paper
 
