@@ -45,5 +45,5 @@ class TumorGenerated(RandomizableTransform, MapTransform):
             tumor_type = np.random.choice(self.tumor_types, p=self.tumor_prob.ravel())
             texture = random.choice(self.textures)
             d['image'][0], d['label'][0] = SynthesisTumor(d['image'][0], d['label'][0], tumor_type, texture)
-            print(tumor_type, d['image'].shape, np.max(d['label']))
+            # print(tumor_type, d['image'].shape, np.max(d['label']))
         return d
