@@ -27,12 +27,13 @@ Medical Imaging Meets NeurIPS, 2022 <br/>
 
 ```bash
 git clone https://github.com/MrGiovanni/SyntheticTumors.git
+cd SyntheticTumors
 wget https://github.com/Project-MONAI/MONAI-extra-test-data/releases/download/0.8.1/model_swinvit.pt
 ```
 
 See [installation instructions](https://github.com/MrGiovanni/SyntheticTumors/blob/main/INSTALL.md).
 
-## 1. Train AI model using real liver tumors
+## 1. Train segmentation models using real tumors
 
 ```
 # Swin-UNETR-Base (pretrain)
@@ -48,7 +49,7 @@ CUDA_VISIBLE_DEVICES=0 python -W ignore -W ignore main.py --optim_lr=4e-4 --batc
 CUDA_VISIBLE_DEVICES=0 python -W ignore -W ignore main.py --optim_lr=4e-4 --batch_size=2 --lrschedule=warmup_cosine --optim_name=adamw --model_name=unet --val_every=200 --val_overlap 0.2 --max_epochs=4000 --save_checkpoint --workers=12 --noamp --distributed --dist-url=tcp://127.0.0.1:12235 --cache_num=200 --logdir="runs/lits_real.no_pretrain.unet" --train_dir <data-path> --val_dir <data-path> --json_dir datafolds/lits.json
 ```
 
-## 2. Train AI model using synthetic liver tumors
+## 2. Train segmentation models using synthetic tumors
 
 ```
 # Swin-UNETR-Base (pretrain)

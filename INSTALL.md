@@ -21,6 +21,7 @@ The code is tested on `python 3.8, Pytorch 1.11`.
 ```bash
 conda create -n syn python=3.8
 source activate syn (or conda activate syn)
+cd SyntheticTumors
 pip install external/surface-distance
 pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
 pip install -r requirements.txt
