@@ -1,4 +1,4 @@
-#### 5-fold cross-validation results for Swin UNETR trained on real tumors
+## 5-fold cross-validation results for Swin UNETR trained on real tumors
 
 ##### Training
 ```bash
