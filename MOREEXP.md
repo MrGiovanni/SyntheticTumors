@@ -35,7 +35,7 @@ for fold in {0..4}; do CUDA_VISIBLE_DEVICES=1 python -W ignore validation_model.
 ##### Training
 ```bash
 datapath=/mnt/zzhou82/PublicAbdominalData/
-for fold in {0..4}; do CUDA_VISIBLE_DEVICES=6 python main.py --optim_lr=4e-4 --batch_size=8 --lrschedule=warmup_cosine --optim_name=adamw --model_name=unet --val_every=200 --max_epochs=4000 --save_checkpoint --workers=24 --noamp --distributed --dist-url=tcp://127.0.0.1:12232 --cache_num=200 --val_overlap=0.5 --train_dir $datapath --val_dir $datapath --logdir="runs/real_fold$fold.no_pretrain.unet" --json_dir datafolds/real_$fold.json; done
+for fold in {0..4}; do CUDA_VISIBLE_DEVICES=6 python -W ignore main.py --optim_lr=4e-4 --batch_size=8 --lrschedule=warmup_cosine --optim_name=adamw --model_name=unet --val_every=200 --max_epochs=4000 --save_checkpoint --workers=24 --noamp --distributed --dist-url=tcp://127.0.0.1:12232 --cache_num=200 --val_overlap=0.5 --train_dir $datapath --val_dir $datapath --logdir="runs/real_fold$fold.no_pretrain.unet" --json_dir datafolds/real_$fold.json; done
 ```
 ##### Testing
 ```bash
@@ -48,7 +48,7 @@ for fold in {0..4}; do CUDA_VISIBLE_DEVICES=1 python -W ignore validation_model.
 ##### Training
 ```bash
 datapath=/mnt/zzhou82/PublicAbdominalData/
-for fold in {0..4}; do CUDA_VISIBLE_DEVICES=6 python main.py --optim_lr=4e-4 --batch_size=8 --lrschedule=warmup_cosine --optim_name=adamw --model_name=unet --val_every=200 --max_epochs=4000 --save_checkpoint --workers=24 --noamp --distributed --dist-url=tcp://127.0.0.1:12236 --cache_num=200 --val_overlap=0.5 --train_dir $datapath --val_dir $datapath --logdir="runs/mix_fold$fold.no_pretrain.unet" --json_dir datafolds/mix_$fold.json; done
+for fold in {0..4}; do CUDA_VISIBLE_DEVICES=6 python -W ignore main.py --optim_lr=4e-4 --batch_size=8 --lrschedule=warmup_cosine --optim_name=adamw --model_name=unet --val_every=200 --max_epochs=4000 --save_checkpoint --workers=24 --noamp --distributed --dist-url=tcp://127.0.0.1:12236 --cache_num=200 --val_overlap=0.5 --train_dir $datapath --val_dir $datapath --logdir="runs/mix_fold$fold.no_pretrain.unet" --json_dir datafolds/mix_$fold.json; done
 ```
 ##### Testing
 ```bash
