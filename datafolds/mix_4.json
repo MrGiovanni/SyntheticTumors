@@ -1,0 +1,529 @@
+{
+    "description": "Liver, and cancer segmentation",
+    "labels": {
+        "0": "background",
+        "1": "liver",
+        "2": "cancer"
+    },
+    "licence": "CC-BY-SA 4.0",
+    "modality": {
+        "0": "CT"
+    },
+    "name": "Liver",
+    "numTraining": 102,
+    "reference": "xxxx",
+    "release": "1.0 04/05/2018",
+    "tensorImageSize": "3D",
+    "training": [
+        {
+            "image": "04_LiTS/img/liver_107.nii.gz",
+            "label": "04_LiTS/label/liver_107.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_23.nii.gz",
+            "label": "04_LiTS/label/liver_23.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_26.nii.gz",
+            "label": "04_LiTS/label/liver_26.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_21.nii.gz",
+            "label": "04_LiTS/label/liver_21.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_104.nii.gz",
+            "label": "04_LiTS/label/liver_104.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_108.nii.gz",
+            "label": "04_LiTS/label/liver_108.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_22.nii.gz",
+            "label": "04_LiTS/label/liver_22.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_16.nii.gz",
+            "label": "04_LiTS/label/liver_16.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_43.nii.gz",
+            "label": "04_LiTS/label/liver_43.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_116.nii.gz",
+            "label": "04_LiTS/label/liver_116.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_100.nii.gz",
+            "label": "04_LiTS/label/liver_100.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_69.nii.gz",
+            "label": "04_LiTS/label/liver_69.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_41.nii.gz",
+            "label": "04_LiTS/label/liver_41.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_45.nii.gz",
+            "label": "04_LiTS/label/liver_45.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_40.nii.gz",
+            "label": "04_LiTS/label/liver_40.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_97.nii.gz",
+            "label": "04_LiTS/label/liver_97.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_28.nii.gz",
+            "label": "04_LiTS/label/liver_28.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_10.nii.gz",
+            "label": "04_LiTS/label/liver_10.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_80.nii.gz",
+            "label": "04_LiTS/label/liver_80.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_76.nii.gz",
+            "label": "04_LiTS/label/liver_76.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_118.nii.gz",
+            "label": "04_LiTS/label/liver_118.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_57.nii.gz",
+            "label": "04_LiTS/label/liver_57.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_99.nii.gz",
+            "label": "04_LiTS/label/liver_99.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_126.nii.gz",
+            "label": "04_LiTS/label/liver_126.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_2.nii.gz",
+            "label": "04_LiTS/label/liver_2.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_7.nii.gz",
+            "label": "04_LiTS/label/liver_7.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_67.nii.gz",
+            "label": "04_LiTS/label/liver_67.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_124.nii.gz",
+            "label": "04_LiTS/label/liver_124.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_75.nii.gz",
+            "label": "04_LiTS/label/liver_75.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_12.nii.gz",
+            "label": "04_LiTS/label/liver_12.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_88.nii.gz",
+            "label": "04_LiTS/label/liver_88.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_95.nii.gz",
+            "label": "04_LiTS/label/liver_95.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_120.nii.gz",
+            "label": "04_LiTS/label/liver_120.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_42.nii.gz",
+            "label": "04_LiTS/label/liver_42.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_87.nii.gz",
+            "label": "04_LiTS/label/liver_87.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_84.nii.gz",
+            "label": "04_LiTS/label/liver_84.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_92.nii.gz",
+            "label": "04_LiTS/label/liver_92.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_89.nii.gz",
+            "label": "04_LiTS/label/liver_89.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_1.nii.gz",
+            "label": "04_LiTS/label/liver_1.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_96.nii.gz",
+            "label": "04_LiTS/label/liver_96.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_59.nii.gz",
+            "label": "04_LiTS/label/liver_59.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_77.nii.gz",
+            "label": "04_LiTS/label/liver_77.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_38.nii.gz",
+            "label": "04_LiTS/label/liver_38.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_9.nii.gz",
+            "label": "04_LiTS/label/liver_9.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_36.nii.gz",
+            "label": "04_LiTS/label/liver_36.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_53.nii.gz",
+            "label": "04_LiTS/label/liver_53.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_30.nii.gz",
+            "label": "04_LiTS/label/liver_30.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_123.nii.gz",
+            "label": "04_LiTS/label/liver_123.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_106.nii.gz",
+            "label": "04_LiTS/label/liver_106.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_33.nii.gz",
+            "label": "04_LiTS/label/liver_33.nii.gz"
+        },
+        {
+            "image": "02_TCIA_Pancreas-CT/img/PANCREAS_0034.nii.gz",
+            "label": "label/tcia-label0034.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0022.nii.gz",
+            "label": "label/multi-atlas-label0022.nii.gz"
+        },
+        {
+            "image": "03_CHAOS/ct/img/8_image.nii.gz",
+            "label": "label/chaos-8_segmentation.nii.gz"
+        },
+        {
+            "image": "03_CHAOS/ct/img/28_image.nii.gz",
+            "label": "label/chaos-28_segmentation.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0029.nii.gz",
+            "label": "label/multi-atlas-label0029.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0005.nii.gz",
+            "label": "label/multi-atlas-label0005.nii.gz"
+        },
+        {
+            "image": "03_CHAOS/ct/img/6_image.nii.gz",
+            "label": "label/chaos-6_segmentation.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0025.nii.gz",
+            "label": "label/multi-atlas-label0025.nii.gz"
+        },
+        {
+            "image": "02_TCIA_Pancreas-CT/img/PANCREAS_0041.nii.gz",
+            "label": "label/tcia-label0041.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0034.nii.gz",
+            "label": "label/multi-atlas-label0034.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0040.nii.gz",
+            "label": "label/multi-atlas-label0040.nii.gz"
+        },
+        {
+            "image": "02_TCIA_Pancreas-CT/img/PANCREAS_0044.nii.gz",
+            "label": "label/tcia-label0044.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0009.nii.gz",
+            "label": "label/multi-atlas-label0009.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0006.nii.gz",
+            "label": "label/multi-atlas-label0006.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0039.nii.gz",
+            "label": "label/multi-atlas-label0039.nii.gz"
+        },
+        {
+            "image": "02_TCIA_Pancreas-CT/img/PANCREAS_0028.nii.gz",
+            "label": "label/tcia-label0028.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0064.nii.gz",
+            "label": "label/multi-atlas-label0064.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0061.nii.gz",
+            "label": "label/multi-atlas-label0061.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0068.nii.gz",
+            "label": "label/multi-atlas-label0068.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0038.nii.gz",
+            "label": "label/multi-atlas-label0038.nii.gz"
+        },
+        {
+            "image": "02_TCIA_Pancreas-CT/img/PANCREAS_0008.nii.gz",
+            "label": "label/tcia-label0008.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0079.nii.gz",
+            "label": "label/multi-atlas-label0079.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0031.nii.gz",
+            "label": "label/multi-atlas-label0031.nii.gz"
+        },
+        {
+            "image": "02_TCIA_Pancreas-CT/img/PANCREAS_0011.nii.gz",
+            "label": "label/tcia-label0011.nii.gz"
+        },
+        {
+            "image": "03_CHAOS/ct/img/14_image.nii.gz",
+            "label": "label/chaos-14_segmentation.nii.gz"
+        },
+        {
+            "image": "02_TCIA_Pancreas-CT/img/PANCREAS_0030.nii.gz",
+            "label": "label/tcia-label0030.nii.gz"
+        },
+        {
+            "image": "02_TCIA_Pancreas-CT/img/PANCREAS_0026.nii.gz",
+            "label": "label/tcia-label0026.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0062.nii.gz",
+            "label": "label/multi-atlas-label0062.nii.gz"
+        },
+        {
+            "image": "03_CHAOS/ct/img/19_image.nii.gz",
+            "label": "label/chaos-19_segmentation.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0010.nii.gz",
+            "label": "label/multi-atlas-label0010.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0074.nii.gz",
+            "label": "label/multi-atlas-label0074.nii.gz"
+        },
+        {
+            "image": "02_TCIA_Pancreas-CT/img/PANCREAS_0016.nii.gz",
+            "label": "label/tcia-label0016.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0078.nii.gz",
+            "label": "label/multi-atlas-label0078.nii.gz"
+        },
+        {
+            "image": "02_TCIA_Pancreas-CT/img/PANCREAS_0038.nii.gz",
+            "label": "label/tcia-label0038.nii.gz"
+        },
+        {
+            "image": "02_TCIA_Pancreas-CT/img/PANCREAS_0021.nii.gz",
+            "label": "label/tcia-label0021.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0003.nii.gz",
+            "label": "label/multi-atlas-label0003.nii.gz"
+        },
+        {
+            "image": "03_CHAOS/ct/img/23_image.nii.gz",
+            "label": "label/chaos-23_segmentation.nii.gz"
+        },
+        {
+            "image": "03_CHAOS/ct/img/25_image.nii.gz",
+            "label": "label/chaos-25_segmentation.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0065.nii.gz",
+            "label": "label/multi-atlas-label0065.nii.gz"
+        },
+        {
+            "image": "03_CHAOS/ct/img/1_image.nii.gz",
+            "label": "label/chaos-1_segmentation.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0021.nii.gz",
+            "label": "label/multi-atlas-label0021.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0063.nii.gz",
+            "label": "label/multi-atlas-label0063.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0007.nii.gz",
+            "label": "label/multi-atlas-label0007.nii.gz"
+        },
+        {
+            "image": "03_CHAOS/ct/img/16_image.nii.gz",
+            "label": "label/chaos-16_segmentation.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0070.nii.gz",
+            "label": "label/multi-atlas-label0070.nii.gz"
+        },
+        {
+            "image": "03_CHAOS/ct/img/10_image.nii.gz",
+            "label": "label/chaos-10_segmentation.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0024.nii.gz",
+            "label": "label/multi-atlas-label0024.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0066.nii.gz",
+            "label": "label/multi-atlas-label0066.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0067.nii.gz",
+            "label": "label/multi-atlas-label0067.nii.gz"
+        },
+        {
+            "image": "02_TCIA_Pancreas-CT/img/PANCREAS_0003.nii.gz",
+            "label": "label/tcia-label0003.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0028.nii.gz",
+            "label": "label/multi-atlas-label0028.nii.gz"
+        },
+        {
+            "image": "01_Multi-Atlas_Labeling/img/img0069.nii.gz",
+            "label": "label/multi-atlas-label0069.nii.gz"
+        }
+    ],
+    "validation": [
+        {
+            "image": "04_LiTS/img/liver_37.nii.gz",
+            "label": "04_LiTS/label/liver_37.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_29.nii.gz",
+            "label": "04_LiTS/label/liver_29.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_54.nii.gz",
+            "label": "04_LiTS/label/liver_54.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_103.nii.gz",
+            "label": "04_LiTS/label/liver_103.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_25.nii.gz",
+            "label": "04_LiTS/label/liver_25.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_58.nii.gz",
+            "label": "04_LiTS/label/liver_58.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_46.nii.gz",
+            "label": "04_LiTS/label/liver_46.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_83.nii.gz",
+            "label": "04_LiTS/label/liver_83.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_6.nii.gz",
+            "label": "04_LiTS/label/liver_6.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_81.nii.gz",
+            "label": "04_LiTS/label/liver_81.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_93.nii.gz",
+            "label": "04_LiTS/label/liver_93.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_8.nii.gz",
+            "label": "04_LiTS/label/liver_8.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_4.nii.gz",
+            "label": "04_LiTS/label/liver_4.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_60.nii.gz",
+            "label": "04_LiTS/label/liver_60.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_125.nii.gz",
+            "label": "04_LiTS/label/liver_125.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_129.nii.gz",
+            "label": "04_LiTS/label/liver_129.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_72.nii.gz",
+            "label": "04_LiTS/label/liver_72.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_11.nii.gz",
+            "label": "04_LiTS/label/liver_11.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_39.nii.gz",
+            "label": "04_LiTS/label/liver_39.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_44.nii.gz",
+            "label": "04_LiTS/label/liver_44.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_27.nii.gz",
+            "label": "04_LiTS/label/liver_27.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_101.nii.gz",
+            "label": "04_LiTS/label/liver_101.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_56.nii.gz",
+            "label": "04_LiTS/label/liver_56.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_35.nii.gz",
+            "label": "04_LiTS/label/liver_35.nii.gz"
+        },
+        {
+            "image": "04_LiTS/img/liver_113.nii.gz",
+            "label": "04_LiTS/label/liver_113.nii.gz"
+        }
+    ]
+}
