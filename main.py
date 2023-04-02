@@ -338,12 +338,10 @@ def _get_transform(args):
 
 def main():
 
-    # monai.config.print_config()
 
     args = parser.parse_args()
     args.amp = not args.noamp
     
-#     args.rank = args.local_rank
     
     if args.randaugment_n > 0:
         args.seg_aug_mode=5
@@ -390,11 +388,6 @@ def main_worker(gpu, args):
     inf_size = [args.roi_x, args.roi_y, args.roi_x]
     num_blocks = list(map(int, args.seg_num_blocks.split(',')))
 
-#     datalist_json = './datafolds/brats21_folds.json'
-    # data_dir ='/dataset/dataset3' # hepatic
-    # val_data_dir ='/dataset/dataset33' # hepatic
-
-    # datalist_json = './datafolds/dataset_dint_{}_nii.json'.format(args.fold)
     
     data_dir = args.train_dir
     val_data_dir = args.val_dir
@@ -453,21 +446,16 @@ def main_worker(gpu, args):
 
 
     dice_loss = DiceCELoss(to_onehot_y=True, softmax=True, squared_pred=True, smooth_nr=0, smooth_dr=1e-6)
-    #dice_loss = DiceLoss(to_onehot_y=False, sigmoid=True)
-#     post_label = AsDiscrete(to_onehot=False, n_classes=args.num_classes)
-#     post_pred = AsDiscrete(argmax=False, to_onehot=False, n_classes=args.num_classes)
 
     post_label = AsDiscrete(to_onehot=True, n_classes=args.num_classes)
     post_pred = AsDiscrete(argmax=True, to_onehot=True, n_classes=args.num_classes)
     
-#     dice_acc = DiceMetric(include_background=True, reduction=MetricReduction.MEAN_BATCH)
-#     dice_acc = lambda x,y : dice_acc((torch.sigmoid(x) > 0.5).float(), y)
-    val_channel_names=['val_liver', 'val_acc_livertumor']
+
+    val_channel_names=['val_liver_dice', 'val_tumor_dice']
 
     print('Crop size', roi_size)
 
-    # train_files, validation_files = json_get_fold(datalist=datalist_json, basedir=root_dir, fold=args.fold)
-#     train_files, validation_files = datafold_read(datalist=datalist_json, basedir=root_dir, fold=args.fold)
+
     datalist = load_decathlon_datalist(datalist_json, True, "training", base_dir=data_dir)
     val_files = load_decathlon_datalist(datalist_json, True, "validation", base_dir=val_data_dir)
     
@@ -484,8 +472,7 @@ def main_worker(gpu, args):
         new_item['image'] = item['image'].replace('.npy', '.gz')
         new_item['label'] = item['label'].replace('.npy', '.gz')
         new_val_files.append(new_item)
-#     new_val_file = val_files.copy()
-    # get valdiation original shape
+
     
     val_shape_dict = {}
     
@@ -540,14 +527,13 @@ def main_worker(gpu, args):
 
     pytorch_total_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
     print('Total parameters count', pytorch_total_params)
-    # print(str(model))
+
 
 
     best_acc = 0
     start_epoch = 0
     if args.checkpoint is not None:
         checkpoint = torch.load(args.checkpoint, map_location='cpu')
-        # model.load_state_dict(checkpoint['state_dict'], strict=True)
 
         from collections import OrderedDict
         new_state_dict = OrderedDict()
@@ -567,13 +553,6 @@ def main_worker(gpu, args):
     model.cuda(args.gpu)
     
 
-#     from thop import profile
-#     input = torch.randn(1, 4, 128, 128, 128).cuda()
-#     macs, params = profile(model, inputs=(input, ))
-#     print('flops: {}'.format(macs))
-#     print('params: {}'.format(params))
-    
-#     print('stop here:{}'.format(stop.shape))
     
     if args.distributed:
         torch.cuda.set_device(args.gpu)
@@ -581,12 +560,9 @@ def main_worker(gpu, args):
             model = torch.nn.SyncBatchNorm.convert_sync_batchnorm(model)
         model.cuda(args.gpu) #??
 
-        # model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[args.gpu], output_device=args.gpu, find_unused_parameters=True)
         model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[args.gpu], output_device=args.gpu, find_unused_parameters=True)
 
-    # params = model.parameters()
-    # if args.filt:
-    #     params=model.filtered_parameters()
+
     if args.optim_name == 'adam':
         optimizer = torch.optim.Adam(model.parameters(), lr=args.optim_lr, weight_decay=args.reg_weight)
     elif args.optim_name == 'adamw':
@@ -601,8 +577,6 @@ def main_worker(gpu, args):
             optimizer, warmup_epochs=args.warmup_epochs, max_epochs=args.max_epochs
         )
 
-    # if args.lrschedule == 'warmup_cosine':
-    #         scheduler = WarmupCosineSchedule(optimizer, warmup_steps=args.warmup_steps, t_total=args.num_steps)
 
     elif args.lrschedule == 'cosine_anneal':
         scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=args.max_epochs)
