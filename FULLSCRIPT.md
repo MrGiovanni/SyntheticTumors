@@ -10,7 +10,7 @@ datapath=/mnt/ccvl15/zzhou82/PublicAbdominalData/
 
 ##### ccvl26
 source /data/zzhou82/environments/syn/bin/activate
-cd /data/zzhou82/project/SyntheticTumors/
+cd /medical_backup/Users/zzhou82/project/SyntheticTumors/
 datapath=/mnt/zzhou82/PublicAbdominalData/
 ```
 
