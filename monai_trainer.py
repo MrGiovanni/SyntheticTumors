@@ -46,30 +46,6 @@ def json_get_fold(datalist, basedir, fold=0, key='training'):
 
     return tr, val
 
-# def json_get_fold(datalist, basedir, fold=0):
-#
-#
-#     with open(datalist) as f:
-#         json_data = json.load(f)
-#
-#
-#     for d in json_data:
-#         for k, v in d.items():
-#             if isinstance(d[k], list):
-#                 d[k] = [os.path.join(basedir, iv) for iv in d[k]]
-#             elif isinstance(d[k], str):
-#                 d[k] = os.path.join(basedir, d[k]) if len(d[k]) > 0 else d[k]
-#
-#     tr=[]
-#     val=[]
-#     for d in json_data:
-#         if d['fold']==fold:
-#             val.append(d)
-#         else:
-#             tr.append(d)
-#
-#     return tr, val
-
 
 
 import math
@@ -99,10 +75,6 @@ class AMDistributedSampler(torch.utils.data.Sampler):
 
         self.num_samples = int(math.ceil(len(self.dataset) * 1.0 / self.num_replicas))
         self.total_size = self.num_samples * self.num_replicas
-        #print(len(self.dataset), self.num_replicas, self.num_samples, self.total_size)
-
-        # if not self.make_even:
-        #     self.total_size = len(self.dataset)
 
         #to track of smaller batches
         indices = list(range(len(self.dataset)))
@@ -133,12 +105,10 @@ class AMDistributedSampler(torch.utils.data.Sampler):
 
         # subsample
         indices = indices[self.rank:self.total_size:self.num_replicas]
-        # assert len(indices) == self.num_samples
         self.num_samples = len(indices)
 
         return iter(indices)
 
-        #return indices
 
     def __len__(self):
         return self.num_samples
@@ -228,20 +198,12 @@ def train_epoch(model, loader, optimizer, scaler, epoch, loss_func, args):
 
         data, target = data.cuda(args.rank), target.cuda(args.rank)
 
-        # print(batch_data.keys())
-        # print(batch_data['image_meta_dict'])
-        # print(batch_data['label_meta_dict'])
-
-        # print('data', data.shape, 'target', target.shape)
-        # print(torch.sum(target==1), torch.sum(target==2), target.shape)
-
 
         # optimizer.zero_grad()
         for param in model.parameters(): param.grad = None
 
         with autocast(enabled=args.amp):
             logits = model(data)
-            # print('data', data.shape, 'target', target.shape, 'logits', logits.shape)
             loss = loss_func(logits, target)
 
         if args.amp:
@@ -252,33 +214,15 @@ def train_epoch(model, loader, optimizer, scaler, epoch, loss_func, args):
             loss.backward()
             optimizer.step()
 
-#         with torch.no_grad():
-#             acc, not_nans = acc_func(logits, target)
-            # print('logits', logits.shape, 'target', target.shape, 'acc', acc, 'not_nans', not_nans)
-
-
 
         if args.distributed:
             loss_list = distributed_all_gather([loss], out_numpy=True, is_valid=idx < loader.sampler.valid_length)
             run_loss.update(np.mean(np.mean(np.stack(loss_list, axis=0), axis=0), axis=0), n=args.batch_size * args.world_size)
-#             for al, nl in zip(acc_list, not_nans_list ):
-#                 run_acc.update(al, n=nl)
+
         else:
 #             run_acc.update(acc.cpu().numpy(), n=not_nans.cpu().numpy())
             run_loss.update(loss.item(), n=args.batch_size)
 
-
-        # if args.distributed:
-        #     loss_list, acc_list = distributed_all_gather([loss, acc], out_numpy=True)
-        #     loss = np.mean(np.stack(loss_list, axis=0))
-        #     acc = np.mean(np.stack(acc_list, axis=0), axis=0)
-        # else:
-        #     loss = loss.item()
-        #     acc = acc.cpu().numpy()
-
-        # run_loss.update(loss, args.batch_size*args.world_size)
-        # # run_acc.update(acc, args.batch_size*args.world_size)
-        # run_acc.update(acc, n=not_nans.cpu().numpy()) #new
 
         if args.rank==0:
             # print(not_nans)
@@ -316,10 +260,8 @@ def val_epoch(model, loader, val_shape_dict, epoch, loss_func, args, model_infer
 
     
     with torch.no_grad():
-        # print(args.rank, 'start1')
 
         for idx, batch_data in enumerate(loader):
-            # print(args.rank, 'start2')
 
             if isinstance(batch_data, list):
                 data, target = batch_data
@@ -327,7 +269,6 @@ def val_epoch(model, loader, val_shape_dict, epoch, loss_func, args, model_infer
                 data, target = batch_data['image'], batch_data['label']
 
             data, target = data.cuda(args.rank), target.cuda(args.rank)
-            # print('rank', args.rank, 'idx', idx, 'data', data.shape, 'target', target.shape)
 
 
             with autocast(enabled=args.amp):
@@ -346,9 +287,7 @@ def val_epoch(model, loader, val_shape_dict, epoch, loss_func, args, model_infer
             name = batch_data["image_meta_dict"]['filename_or_obj'][0].split('/')[-1]
             val_shape = val_shape_dict[name]
             
-            
-#             logits = F.interpolate(logits, (val_shape[0], val_shape[1], val_shape[2]), mode='nearest')
-#             target = F.interpolate(target.float(), (val_shape[0], val_shape[1], val_shape[2]), mode='nearest')
+
             pred = resample(logits[0], val_shape)
             y = resample(target[0], val_shape)
 
@@ -358,14 +297,11 @@ def val_epoch(model, loader, val_shape_dict, epoch, loss_func, args, model_infer
                 dice_list_sub.append(organ_Dice)
 
             
-#             acc, not_nans = acc_func(logits, target)
-
             if args.distributed:
                 torch.distributed.barrier()
                 gather_list_sub = [[0]*len(dice_list_sub) for _ in range(dist.get_world_size())]
                 torch.distributed.all_gather_object(gather_list_sub, dice_list_sub)
-#                 avg_subs = np.mean([np.mean(s) for s in gather_list_sub])
-                
+
                 classes_metriclist = []
                 for i in range(args.num_classes-1):
                     class_metric = [s[i] for s in gather_list_sub]
@@ -374,16 +310,11 @@ def val_epoch(model, loader, val_shape_dict, epoch, loss_func, args, model_infer
                 ave_all = np.mean(avg_classes)
 #                 if not loss.is_cuda:
                 loss = loss.cuda(args.rank)
-#                 acc = acc.cuda(args.rank)
-#                 not_nans = not_nans.cuda(args.rank)
                 
                 loss_list = distributed_all_gather([loss], out_numpy=True, is_valid=idx < loader.sampler.valid_length)
 
                 run_loss.update(np.mean(np.mean(np.stack(loss_list, axis=0), axis=0)), n=args.batch_size * args.world_size)
                 
-#                 for al, nl in zip(acc_list, not_nans_list):
-#                     run_acc.update(al, n=nl)
-#                 for al in zip(avg_classes):
                 run_acc.update(avg_classes, n=1)
 
             # If you do not use distributed, this program will raise error.
@@ -393,8 +324,6 @@ def val_epoch(model, loader, val_shape_dict, epoch, loss_func, args, model_infer
                 run_loss.update(loss.item(), n=args.batch_size)
 
 
-            # run_loss.update(loss.item(), n=args.batch_size * args.world_size)
-            # run_acc.update(acc.cpu().numpy(), n=not_nans.cpu().numpy())
 
             # print(args.rank, 'end1')
             if args.rank == 0:
@@ -471,16 +400,13 @@ def run_training(model,
 
         epoch_time = time.time()
         train_loss = train_epoch(model, train_loader, optimizer, scaler=scaler, epoch=epoch, loss_func=loss_func, args=args)
-#         if args.rank == 0:
-#             print('Final training  {}/{}'.format(epoch, args.max_epochs - 1), 'loss: {:.4f}'.format(train_loss),
-#                   'acc', train_acc, 'time {:.2f}s'.format(time.time() - epoch_time))
+
         if args.rank == 0:
             print('Final training  {}/{}'.format(epoch, args.max_epochs - 1), 'loss: {:.4f}'.format(train_loss),
                   'time {:.2f}s'.format(time.time() - epoch_time))
             
         if args.rank==0 and writer is not None:
             writer.add_scalar('train_loss', train_loss, epoch)
-#             writer.add_scalar('train_acc', np.mean(train_acc), epoch)
 
 
 
@@ -501,12 +427,11 @@ def run_training(model,
                       'acc', val_acc, 'time {:.2f}s'.format(time.time() - epoch_time), file=f)
                 if writer is not None:
                     writer.add_scalar('val_loss', val_loss, epoch)
-                    writer.add_scalar('val_acc', np.mean(val_acc), epoch)
+                    writer.add_scalar('val_mean_dice', np.mean(val_acc), epoch)
                     if val_channel_names is not None:
                         for val_channel_ind in range(len(val_channel_names)):
                             if val_channel_ind < val_acc.size:
                                 writer.add_scalar(val_channel_names[val_channel_ind], val_acc[val_channel_ind], epoch)
-                                # print('adding  val', val_channel_names[val_channel_ind], val_acc[val_channel_ind])
 
                 if np.mean(val_acc) > val_acc_max:
                     print('new best ({:.6f} --> {:.6f}). '.format(val_acc_max, np.mean(val_acc)))

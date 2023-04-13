@@ -16,7 +16,7 @@ This repository provides extensive examples of synthetic liver tumors generated 
 <sup>3 </sup>Johns Hopkins University,   <br/>
 <sup>4 </sup>The First Affiliated Hospital of Nanjing Medical University <br/>
 CVPR, 2023 <br/>
-[paper](https://github.com/MrGiovanni/SyntheticTumors/blob/main/documents/hu2023label.pdf) | [code](https://github.com/MrGiovanni/SyntheticTumors)
+[paper](https://arxiv.org/pdf/2303.14869.pdf) | [code](https://github.com/MrGiovanni/SyntheticTumors) | [talk](https://www.youtube.com/watch?v=Alqr3vQSDro) (by Alan Yuille)
 
 <b>Synthetic Tumors Make AI Segment Tumors Better</b> <br/>
 [Qixin Hu](https://scholar.google.com/citations?user=EqD5GP8AAAAJ&hl=en)<sup>1</sup>, [Junfei Xiao](https://lambert-x.github.io/)<sup>2</sup>, [Yixiong Chen](https://scholar.google.com/citations?hl=en&user=bVHYVXQAAAAJ)<sup>3</sup>, Shuwen Sun<sup>4</sup>, [Jieneng Chen](https://scholar.google.com/citations?hl=en&user=yLYj88sAAAAJ)<sup>2</sup>, [Alan L. Yuille](https://www.cs.jhu.edu/~ayuille/)<sup>2</sup>, and [Zongwei Zhou](https://www.zongweiz.com/)<sup>2,*</sup> <br/>
@@ -121,10 +121,17 @@ CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --model=swin_unetrv2 --swi
 ## Citation
 
 ```
+@article{hu2023label,
+  title={Label-Free Liver Tumor Segmentation},
+  author={Hu, Qixin and Chen, Yixiong and Xiao, Junfei and Sun, Shuwen and Chen, Jieneng and Yuille, Alan and Zhou, Zongwei},
+  journal={arXiv preprint arXiv:2303.14869},
+  year={2023}
+}
+
 @article{hu2022synthetic,
   title={Synthetic Tumors Make AI Segment Tumors Better},
   author={Hu, Qixin and Xiao, Junfei and Chen, Yixiong and Sun, Shuwen and Chen, Jie-Neng and Yuille, Alan and Zhou, Zongwei},
-  journal={arXiv preprint arXiv:2210.14845},
+  journal={NeurIPS Workshop on Medical Imaging meets NeurIPS},
   year={2022}
 }
 ```
