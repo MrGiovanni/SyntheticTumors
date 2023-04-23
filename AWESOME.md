@@ -9,7 +9,7 @@
 
 **Label-Free Liver Tumor Segmentation** \
 *Qixin Hu, Yixiong Chen, Junfei Xiao, Shuwen Sun, Jieneng Chen, Alan Yuille, Zongwei Zhou* \
-CVPR | 27 Mar 2023 \
+CVPR | 27 March 2023 \
 [paper](https://arxiv.org/abs/2303.14869) [![GitHub stars](https://img.shields.io/github/stars/MrGiovanni/SyntheticTumors.svg?logo=github&label=Stars)](https://github.com/MrGiovanni/SyntheticTumors)
 
 **Synthetic data accelerates the development of generalizable learning-based algorithms for X-ray image analysis** \
