@@ -15,7 +15,7 @@ CVPR | 27 March 2023 \
 **Synthetic data accelerates the development of generalizable learning-based algorithms for X-ray image analysis** \
 *Cong Gao, Benjamin D. Killeen, Yicheng Hu, Robert B. Grupp, Russell H. Taylor, Mehran Armand, Mathias Unberath* \
 Nature Machine Intelligence | 20 March 2023 \
-[paper](https://www.nature.com/articles/s42256-023-00629-1)
+[paper](https://www.nature.com/articles/s42256-023-00629-1) [dataset](https://doi.org/10.7281/T1/2PGJQU) [![GitHub stars](https://img.shields.io/github/stars/arcadelab/SyntheX.svg?logo=github&label=Stars)](https://github.com/arcadelab/SyntheX)
 
 **Pseudo-Label Guided Image Synthesis for Semi-Supervised COVID-19 Pneumonia Infection Segmentation** \
 *Fei Lyu, Mang Ye, Jonathan Frederik Carlsen, Kenny Erleben, Sune Darkner, Pong C Yuen* \
