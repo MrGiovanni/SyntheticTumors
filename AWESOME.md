@@ -42,6 +42,11 @@ Medical Imaging Meets NeurIPS | 26 October 2022 \
 Medical Image Analysis | 10 July 2022 \
 [paper](https://www.sciencedirect.com/science/article/pii/S1361841522001815)
 
+**Learning From Synthetic CT Images via Test-Time Training for Liver Tumor Segmentation** \
+*Fei Lyu, Mang Ye, Andy J. Ma, Terry Cheuk-Fung Yip, Grace Lai-Hung Wong, Pong C. Yuen* \
+IEEE TMI | 11 April 2022 \
+[paper](https://ieeexplore.ieee.org/abstract/document/9754550) [![GitHub stars](https://img.shields.io/github/stars/FeiLyu/SR-TTT.svg?logo=github&label=Stars)](https://github.com/FeiLyu/SR-TTT)
+
 **Label-Free Segmentation of COVID-19 Lesions in Lung CT** \
 *Qingsong Yao, Li Xiao, Peihang Liu, S Kevin Zhou* \
 IEEE TMI | 24 March 2021 \
