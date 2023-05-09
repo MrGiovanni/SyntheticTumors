@@ -37,6 +37,11 @@ IEEE BHI | 31 January 2023 \
 Medical Imaging Meets NeurIPS | 26 October 2022 \
 [paper](https://arxiv.org/pdf/2210.14845.pdf) [![GitHub stars](https://img.shields.io/github/stars/MrGiovanni/SyntheticTumors.svg?logo=github&label=Stars)](https://github.com/MrGiovanni/SyntheticTumors)
 
+**Pancreatic Image Augmentation Based on Local Region Texture Synthesis for Tumor Segmentation** \
+*Zihan Wei, Yizhou Chen, Qiu Guan, et al.* \
+ICANN | 07 September 2022 \
+[paper](https://drive.google.com/file/d/16GQqAv384QQyJ9YhXAIbDnzcfvqjLbEu)
+
 **Anomaly segmentation in retinal images with poisson-blending data augmentation** \
 *Hualin Wang, Yuhong Zhou, Jiong Zhang, Jianqin Lei, Dongke Sun, Feng Xu, Xiayu Xu* \
 Medical Image Analysis | 10 July 2022 \
@@ -47,6 +52,12 @@ Medical Image Analysis | 10 July 2022 \
 IEEE TMI | 11 April 2022 \
 [paper](https://ieeexplore.ieee.org/abstract/document/9754550) [![GitHub stars](https://img.shields.io/github/stars/FeiLyu/SR-TTT.svg?logo=github&label=Stars)](https://github.com/FeiLyu/SR-TTT)
 
+**Virtual reality for synergistic surgical training and data generation** \
+*Adnan Munawar, Zhaoshuo Li, et al.* \
+AE-CAI MICCAI | 15 November 2021
+[paper](https://arxiv.org/pdf/2111.08097.pdf) [![GitHub stars](https://img.shields.io/github/stars/LCSR-SICKKIDS/volumetric_drilling.svg?logo=github&label=Stars)](https://github.com/LCSR-SICKKIDS/volumetric_drilling)
+
+
 **Label-Free Segmentation of COVID-19 Lesions in Lung CT** \
 *Qingsong Yao, Li Xiao, Peihang Liu, S Kevin Zhou* \
 IEEE TMI | 24 March 2021 \
@@ -56,6 +67,12 @@ IEEE TMI | 24 March 2021 \
 *Qiangguo Jin, Hui Cui, Changming Sun, Zhaopeng Meng, Ran Su* \
 Knowledge-Based Systems | 5 January 2021 \
 [paper](https://www.sciencedirect.com/science/article/pii/S0950705121000162) [![GitHub stars](https://img.shields.io/github/stars/qgking/FRGAN.svg?logo=github&label=Stars)](https://github.com/qgking/FRGAN)
+
+
+**Generating large labeled data sets for laparoscopic image processing tasks using unpaired image-to-image translation**
+*Micha Pfeiffer, Isabel Funke, et al.* \
+MICCAI | 5 July 2019 \
+[paper](https://arxiv.org/pdf/1907.02882.pdf) | [dataset](http://opencas.dkfz.de/image2image/)
 
 **Abnormal colon polyp image synthesis using conditional adversarial networks for improved detection performance** \
 *Younghak Shin; Hemin Ali Qadir; Ilangko Balasingham* \
