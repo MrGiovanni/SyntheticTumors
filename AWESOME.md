@@ -54,7 +54,7 @@ IEEE TMI | 11 April 2022 \
 
 **Virtual reality for synergistic surgical training and data generation** \
 *Adnan Munawar, Zhaoshuo Li, et al.* \
-AE-CAI MICCAI | 15 November 2021
+AE-CAI MICCAI | 15 November 2021 \
 [paper](https://arxiv.org/pdf/2111.08097.pdf) [![GitHub stars](https://img.shields.io/github/stars/LCSR-SICKKIDS/volumetric_drilling.svg?logo=github&label=Stars)](https://github.com/LCSR-SICKKIDS/volumetric_drilling)
 
 
