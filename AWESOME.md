@@ -69,7 +69,7 @@ Knowledge-Based Systems | 5 January 2021 \
 [paper](https://www.sciencedirect.com/science/article/pii/S0950705121000162) [![GitHub stars](https://img.shields.io/github/stars/qgking/FRGAN.svg?logo=github&label=Stars)](https://github.com/qgking/FRGAN)
 
 
-**Generating large labeled data sets for laparoscopic image processing tasks using unpaired image-to-image translation**
+**Generating large labeled data sets for laparoscopic image processing tasks using unpaired image-to-image translation** \
 *Micha Pfeiffer, Isabel Funke, et al.* \
 MICCAI | 5 July 2019 \
 [paper](https://arxiv.org/pdf/1907.02882.pdf) | [dataset](http://opencas.dkfz.de/image2image/)
