@@ -27,7 +27,11 @@ CVPR, 2023 <br/>
 Medical Imaging Meets NeurIPS, 2022 <br/>
 [paper](https://arxiv.org/pdf/2210.14845.pdf) | [code](https://github.com/MrGiovanni/SyntheticTumors) | [slides](https://github.com/MrGiovanni/SyntheticTumors/blob/main/documents/slides.pdf) | [poster](https://github.com/MrGiovanni/SyntheticTumors/blob/main/documents/poster.pdf) | demo | [talk](https://www.youtube.com/watch?v=bJpI9tCTsuA)
 
-**We also provide a list of publications related to tumor synthesis in [Awesome Synthetic Tumors](AWESOME.md) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re).**
+**We have documented common questions for the paper in [Frequently Asked Questions (FAQ)](documents/FAQ.md).**
+
+**We have also provided a list of publications related to tumor synthesis in [Awesome Synthetic Tumors](AWESOME.md) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re).**
+
+
    
 ## 0. Installation
 
