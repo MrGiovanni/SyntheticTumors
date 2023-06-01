@@ -127,10 +127,11 @@ CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --model=swin_unetrv2 --swi
 ## Citation
 
 ```
-@article{hu2023label,
-  title={Label-Free Liver Tumor Segmentation},
-  author={Hu, Qixin and Chen, Yixiong and Xiao, Junfei and Sun, Shuwen and Chen, Jieneng and Yuille, Alan and Zhou, Zongwei},
-  journal={arXiv preprint arXiv:2303.14869},
+@inproceedings{hu2023label,
+  title={Label-free liver tumor segmentation},
+  author={Hu, Qixin and Chen, Yixiong and Xiao, Junfei and Sun, Shuwen and Chen, Jieneng and Yuille, Alan L and Zhou, Zongwei},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={7422--7432},
   year={2023}
 }
 
