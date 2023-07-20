@@ -35,10 +35,12 @@ Medical Imaging Meets NeurIPS, 2022 <br/>
 
 | Tumor | Model | Pre-trained? | Download |
 | ----  | ----  | ----         | ----     |
+| real  | unet  | no | [link](https://www.dropbox.com/s/8jfu22zgz4a8qjk/model.pt) |
 | real  | swin_unetrv2_base | yes | [link](https://www.dropbox.com/s/cmh3uvwtfd3jlvp/model.pt) |
 | real  | swin_unetrv2_base | no  | [link](https://www.dropbox.com/s/vf3se1yns18t7qm/model.pt) |
 | real  | swin_unetrv2_small | no  | [link](https://www.dropbox.com/s/337uz6484zyzjty/model.pt) |
 | real  | swin_unetrv2_tiny | no  | [link](https://www.dropbox.com/s/leh04qh5hvfq9i5/model.pt) |
+| synt  | unet  | no | [link](https://www.dropbox.com/s/gb01obtxlbktmrp/model.pt) |
 | synt  | swin_unetrv2_base | yes | [link](https://www.dropbox.com/s/pxvb6qfmeaha2va/model.pt) |
 | synt  | swin_unetrv2_base | no  | [link](https://www.dropbox.com/s/idxwss85bmx3ejo/model.pt) |
 | synt  | swin_unetrv2_small | no  | [link](https://www.dropbox.com/s/nkb64yo4jmscoy6/model.pt) |
@@ -46,7 +48,7 @@ Medical Imaging Meets NeurIPS, 2022 <br/>
 
 **Use the following command to download everything.**
 ```bash
-wget https://www.dropbox.com/s/6xpzvsmimpt0q9y/runs.tar.gz
+wget https://www.dropbox.com/s/jys4tt2ttmr7ig1/runs.tar.gz
 tar -xzvf runs.tar.gz
 ```
    
