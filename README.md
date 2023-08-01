@@ -27,6 +27,14 @@ CVPR, 2023 <br/>
 Medical Imaging Meets NeurIPS, 2022 <br/>
 [paper](https://arxiv.org/pdf/2210.14845.pdf) | [code](https://github.com/MrGiovanni/SyntheticTumors) | [slides](https://github.com/MrGiovanni/SyntheticTumors/blob/main/documents/slides.pdf) | [poster](https://github.com/MrGiovanni/SyntheticTumors/blob/main/documents/poster.pdf) | demo | [talk](https://www.youtube.com/watch?v=bJpI9tCTsuA)
 
+<b>Early Detection and Localization of Pancreatic Cancer by Label-Free Tumor Synthesis</b> <br/>
+[Bowen Li](https://scholar.google.com/citations?user=UfINwO0AAAAJ&hl=en)<sup>1</sup>, [Yu-Cheng Chou](https://sites.google.com/view/yu-cheng-chou)<sup>1</sup>, Shuwen Sun<sup>2</sup>, Hualin Qiao<sup>3</sup>, [Alan L. Yuille](https://www.cs.jhu.edu/~ayuille/)<sup>1</sup>, and [Zongwei Zhou](https://www.zongweiz.com/)<sup>1,*</sup> <br/>
+<sup>1 </sup>Johns Hopkins University, <br/>
+<sup>2 </sup>The First Affiliated Hospital of Nanjing Medical University,   <br/>
+<sup>3 </sup>Sepax technologies <br/>
+Big Task Small Data, 1001-AI, MICCAI Workshop, 2023 <br/>
+paper | [code](https://github.com/MrGiovanni/SyntheticTumors)
+
 **We have documented common questions for the paper in [Frequently Asked Questions (FAQ)](documents/FAQ.md).**
 
 **We have also provided a list of publications related to tumor synthesis in [Awesome Synthetic Tumors](AWESOME.md) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re).**
