@@ -168,6 +168,13 @@ CUDA_VISIBLE_DEVICES=0 python -W ignore validation.py --model=swin_unetrv2 --swi
   journal={NeurIPS Workshop on Medical Imaging meets NeurIPS},
   year={2022}
 }
+
+@article{li2023early,
+  title={Early Detection and Localization of Pancreatic Cancer by Label-Free Tumor Synthesis},
+  author={Li, Bowen and Chou, Yu-Cheng and Sun, Shuwen and Qiao, Hualin and Yuille, Alan and Zhou, Zongwei},
+  journal={arXiv preprint arXiv:2308.03008},
+  year={2023}
+}
 ```
 
 ## Acknowledgement
