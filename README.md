@@ -33,7 +33,7 @@ Medical Imaging Meets NeurIPS, 2022 <br/>
 <sup>2 </sup>The First Affiliated Hospital of Nanjing Medical University,   <br/>
 <sup>3 </sup>Sepax technologies <br/>
 Big Task Small Data, 1001-AI, MICCAI Workshop, 2023 <br/>
-paper | [code](https://github.com/MrGiovanni/SyntheticTumors)
+[paper](https://arxiv.org/pdf/2308.03008.pdf) | [code](https://github.com/MrGiovanni/SyntheticTumors)
 
 **We have documented common questions for the paper in [Frequently Asked Questions (FAQ)](documents/FAQ.md).**
 
