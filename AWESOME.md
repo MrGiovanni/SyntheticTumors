@@ -14,8 +14,7 @@ MICCAI Workshop on Big Task Small Data | 30 Sep 2023
 
 **How Good Are Synthetic Medical Images? An Empirical Study with Lung Ultrasound**
 *Menghan Yu, Sourabh Kulhare, Courosh Mehanian, Charles B Delahunt, Daniel E Shea, Zohreh Laverriere, Ishan Shah, Matthew P Horning*
-[paper](https://browse.arxiv.org/pdf/2310.03608.pdf) [![GitHub stars](https://img.shields.io/github/stars/global-health-labs/us-dcgan.svg?logo=github&label=Stars)]
-(https://github.com/global-health-labs/us-dcgan)
+[paper](https://browse.arxiv.org/pdf/2310.03608.pdf) [![GitHub stars](https://img.shields.io/github/stars/global-health-labs/us-dcgan.svg?logo=github&label=Stars)](https://github.com/global-health-labs/us-dcgan)
 
 **You Don't Have to Be Perfect to Be Amazing: Unveil the Utility of Synthetic Images**
 *Xiaodan Xiang, Federico Felder, Yang Nan, Giorgos Papanastasiou, Walsh Simon, Guang Yang*
