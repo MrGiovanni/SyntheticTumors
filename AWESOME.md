@@ -7,15 +7,20 @@
 
 ## Paper
 
+**Early Detection and Localization of Pancreatic Cancer by Label-Free Tumor Synthesis**
+Bowen Li, Yu-Cheng Chou, Shuwen Sun, Hualin Qiao, Alan Yuille, Zongwei Zhou
+MICCAI Workshop on Big Task Small Data | 30 Sep 2023
+[paper](https://browse.arxiv.org/pdf/2308.03008.pdf) [![GitHub stars](https://img.shields.io/github/stars/MrGiovanni/SyntheticTumors.svg?logo=github&label=Stars)](https://github.com/MrGiovanni/SyntheticTumors)
+
 **How Good Are Synthetic Medical Images? An Empirical Study with Lung Ultrasound**
 *Menghan Yu, Sourabh Kulhare, Courosh Mehanian, Charles B Delahunt, Daniel E Shea, Zohreh Laverriere, Ishan Shah, Matthew P Horning*
-[paper](https://browse.arxiv.org/pdf/2310.03608.pdf)[![GitHub stars](https://img.shields.io/github/stars/global-health-labs/us-dcgan.svg?logo=github&label=Stars)]
+[paper](https://browse.arxiv.org/pdf/2310.03608.pdf) [![GitHub stars](https://img.shields.io/github/stars/global-health-labs/us-dcgan.svg?logo=github&label=Stars)]
 (https://github.com/global-health-labs/us-dcgan)
 
 **You Don't Have to Be Perfect to Be Amazing: Unveil the Utility of Synthetic Images**
 *Xiaodan Xiang, Federico Felder, Yang Nan, Giorgos Papanastasiou, Walsh Simon, Guang Yang*
 MICCAI | 25 May 2023
-[paper](https://arxiv.org/abs/2305.18337)[![GitHub stars](https://img.shields.io/github/stars/ayanglab/MedSynAnalyzer.svg?logo=github&label=Stars)](https://github.com/ayanglab/MedSynAnalyzer)
+[paper](https://arxiv.org/abs/2305.18337) [![GitHub stars](https://img.shields.io/github/stars/ayanglab/MedSynAnalyzer.svg?logo=github&label=Stars)](https://github.com/ayanglab/MedSynAnalyzer)
 
 **Label-Free Liver Tumor Segmentation**
 *Qixin Hu, Yixiong Chen, Junfei Xiao, Shuwen Sun, Jieneng Chen, Alan Yuille, Zongwei Zhou*
