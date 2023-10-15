@@ -81,6 +81,11 @@ IEEE TMI | 24 March 2021
 Knowledge-Based Systems | 5 January 2021 
 [paper](https://www.sciencedirect.com/science/article/pii/S0950705121000162) [![GitHub stars](https://img.shields.io/github/stars/qgking/FRGAN.svg?logo=github&label=Stars)](https://github.com/qgking/FRGAN)
 
+**Time-series Generative Adversarial Networks**
+*Jinsung Yoon, Daniel Jarrett, Mihaela van der Schaar*
+NeurIPS | 8 December 2019
+[paper](https://papers.nips.cc/paper_files/paper/2019/file/c9efe5f26cd17ba6216bbe2a7d26d490-Paper.pdf)[![GitHub stars](https://img.shields.io/github/stars/jsyoon0823/TimeGAN.svg?logo=github&label=Stars)](https://github.com/jsyoon0823/TimeGAN)
+
 **Generating large labeled data sets for laparoscopic image processing tasks using unpaired image-to-image translation** 
 *Micha Pfeiffer, Isabel Funke, et al.* 
 MICCAI | 5 July 2019 
@@ -95,3 +100,9 @@ IEEE Access | 27 June 2019
 *Changhee Han, Yoshiro Kitamura, Akira Kudo, Akimichi Ichinose, Leonardo Rundo, Yujiro Furukawa, Kazuki Umemoto, Yuanzhong Li, Hideki Nakayama* 
 3DV | 12 June 2019 
 [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8886112)
+
+
+**PATE-GAN: Generating synthetic data with differential privacy guarantees**
+*James Jordon, Jinsung Yoon, Mihaela van der Schaar*
+ICLR | 21 December 2018
+[paper](https://openreview.net/pdf?id=S1zk9iRqF7) [![GitHub stars](https://img.shields.io/github/stars/vanderschaarlab/mlforhealthlabpub.svg?logo=github&label=Stars)](https://github.com/vanderschaarlab/mlforhealthlabpub/tree/main/alg/pategan)
