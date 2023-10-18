@@ -7,6 +7,11 @@
 
 ## Paper
 
+**Unsupervised Liver Tumor Segmentation with Pseudo Anomaly Synthesis**
+*Zhaoxiang Zhang, Hanqiu Deng, Xingyu Li*
+SASHIMI Workshop on Simulation and Synthesis in Medical Imaging | 7 Oct 2023
+[paper](https://link.springer.com/chapter/10.1007/978-3-031-44689-4_9) [![GitHub stars](https://img.shields.io/github/stars/nono-zz/LiTs-Segmentation.svg?logo=github&label=Stars)](https://github.com/nono-zz/LiTs-Segmentation)
+
 **Early Detection and Localization of Pancreatic Cancer by Label-Free Tumor Synthesis**
 Bowen Li, Yu-Cheng Chou, Shuwen Sun, Hualin Qiao, Alan Yuille, Zongwei Zhou
 MICCAI Workshop on Big Task Small Data | 30 Sep 2023
