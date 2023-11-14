@@ -7,6 +7,11 @@
 
 ## Paper
 
+**SynthSeg: Segmentation of brain MRI scans of any contrast and resolution without retraining**
+*Benjamin Billot, Douglas N. Greve, Oula Puonti, Axel Thielscher, Koen Van Leemput, Bruce Fischl, Adrian V. Dalca, Juan Eugenio Iglesias, for the ADNI*
+Medical Image Analysis | 25 Feb 2023
+[paper](https://www.sciencedirect.com/science/article/pii/S1361841523000506) [![GitHub stars](https://img.shields.io/github/stars/BBillot/SynthSeg.svg?logo=github&label=Stars)](https://github.com/BBillot/SynthSeg)
+
 **Unsupervised Liver Tumor Segmentation with Pseudo Anomaly Synthesis**
 *Zhaoxiang Zhang, Hanqiu Deng, Xingyu Li*
 SASHIMI Workshop on Simulation and Synthesis in Medical Imaging | 7 Oct 2023
