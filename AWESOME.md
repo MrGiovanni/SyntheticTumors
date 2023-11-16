@@ -7,6 +7,11 @@
 
 ## Paper
 
+**Privacy Distillation: Reducing Re-identification Risk of Diffusion Models**
+*Fernandez, Virginia and Sanchez, Pedro and Pinaya, Walter Hugo Lopez and Jacenkow, Grzegorz and Tsaftaris, Sotirios A and Cardoso, Jorge*
+arXiv | 2 Jun 2023
+[paper](https://arxiv.org/abs/2306.01322)
+
 **SynthSeg: Segmentation of brain MRI scans of any contrast and resolution without retraining**
 *Benjamin Billot, Douglas N. Greve, Oula Puonti, Axel Thielscher, Koen Van Leemput, Bruce Fischl, Adrian V. Dalca, Juan Eugenio Iglesias, for the ADNI*
 Medical Image Analysis | 25 Feb 2023
