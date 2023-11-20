@@ -7,6 +7,11 @@
 
 ## Paper
 
+**Synthetically Enhanced: Unveiling Synthetic Data's Potential in Medical Imaging Research**
+*Bardia Khosravi, Frank Li, Theo Dapamede, Pouria Rouzrokh, et al.*
+arXiv | 15 Nov 2023
+[paper](https://arxiv.org/abs/2311.09402)
+
 **Privacy Distillation: Reducing Re-identification Risk of Diffusion Models**
 *Fernandez, Virginia and Sanchez, Pedro and Pinaya, Walter Hugo Lopez and Jacenkow, Grzegorz and Tsaftaris, Sotirios A and Cardoso, Jorge*
 arXiv | 2 Jun 2023
