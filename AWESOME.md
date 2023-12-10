@@ -7,6 +7,16 @@
 
 ## Paper
 
+**SynFundus: Generating a synthetic fundus images dataset with millions of samples and multi-disease annotations**
+*Fangxin Shang, Jie Fu, Yehui Yang, Lei Ma*
+arXiv | 1 Dec 2023
+[paper](https://arxiv.org/abs/2312.00377)
+
+**Human brain responses are modulated when exposed to optimized natural images or synthetically generated images**
+*Zijin Gu, Keith Jamison, Mert R. Sabuncu, Amy Kuceyeski*
+Communications Biology | 23 Oct 2023
+[paper](https://www.nature.com/articles/s42003-023-05440-7)
+
 **Synthetically Enhanced: Unveiling Synthetic Data's Potential in Medical Imaging Research**
 *Bardia Khosravi, Frank Li, Theo Dapamede, Pouria Rouzrokh, et al.*
 arXiv | 15 Nov 2023
