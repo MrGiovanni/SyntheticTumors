@@ -7,6 +7,11 @@
 
 ## Paper
 
+**Virtual elastography ultrasound via generative adversarial network for breast cancer diagnosis**
+*Zhao Yao, Ting Luo, et al.*
+Nature Communications | 11 Feb 2023
+[paper](https://www.nature.com/articles/s41467-023-36102-1) [![GitHub stars](https://img.shields.io/github/stars/yyyzzzhao/VEUS.svg?logo=github&label=Stars)](https://github.com/yyyzzzhao/VEUS)
+
 **SynFundus: Generating a synthetic fundus images dataset with millions of samples and multi-disease annotations**
 *Fangxin Shang, Jie Fu, Yehui Yang, Lei Ma*
 arXiv | 1 Dec 2023
