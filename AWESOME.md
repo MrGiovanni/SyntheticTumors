@@ -7,6 +7,11 @@
 
 ## Paper
 
+**Towards Generalizable Tumor Synthesis**
+*Qi Chen, Xiaoxi Chen, Haorui Song, Zhiwei Xiong,  Alan Yuille, Chen Wei, Zongwei Zhou*
+CVPR | 29 Feb 2024
+[paper](https://arxiv.org/pdf/2402.19470.pdf) [![GitHub stars](https://img.shields.io/github/stars/MrGiovanni/DiffTumor.svg?logo=github&label=Stars)](https://github.com/MrGiovanni/DiffTumor)
+
 **Virtual elastography ultrasound via generative adversarial network for breast cancer diagnosis**
 *Zhao Yao, Ting Luo, et al.*
 Nature Communications | 11 Feb 2023
