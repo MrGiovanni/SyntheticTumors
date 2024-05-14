@@ -7,6 +7,11 @@
 
 ## Paper
 
+**From Pixel to Cancer: Cellular Automata in Computed Tomography**
+*Yuxiang Lai, Xiaoxi Chen, Angtian Wang, Alan Yuille, Zongwei Zhou*
+MICCAI | 13 May 2024
+[paper](https://www.cs.jhu.edu/~alanlab/Pubs24/lai2024pixel.pdf) [![GitHub stars](https://img.shields.io/github/stars/MrGiovanni/Pixel2Cancer.svg?logo=github&label=Stars)](https://github.com/MrGiovanni/Pixel2Cancer)
+
 **Towards Generalizable Tumor Synthesis**
 *Qi Chen, Xiaoxi Chen, Haorui Song, Zhiwei Xiong,  Alan Yuille, Chen Wei, Zongwei Zhou*
 CVPR | 29 Feb 2024
