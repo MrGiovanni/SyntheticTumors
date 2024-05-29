@@ -47,6 +47,11 @@ arXiv | 2 Jun 2023
 Medical Image Analysis | 25 Feb 2023
 [paper](https://www.sciencedirect.com/science/article/pii/S1361841523000506) [![GitHub stars](https://img.shields.io/github/stars/BBillot/SynthSeg.svg?logo=github&label=Stars)](https://github.com/BBillot/SynthSeg)
 
+**Image Synthesis with Disentangled Attributes for Chest X-Ray Nodule Augmentation and Detection**
+*Zhenrong Shen, Xi Ouyang, Bin Xiao, Jie-Zhi Cheng, Dinggang Shen, Qian Wang*
+MEDIA | Feb 2023
+[paper](https://arxiv.org/abs/2207.09389)
+
 **Unsupervised Liver Tumor Segmentation with Pseudo Anomaly Synthesis**
 *Zhaoxiang Zhang, Hanqiu Deng, Xingyu Li*
 SASHIMI Workshop on Simulation and Synthesis in Medical Imaging | 7 Oct 2023
