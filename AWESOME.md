@@ -6,6 +6,15 @@
 - 🔥 Welcome to share the paper and code through the [issues](https://github.com/MrGiovanni/SyntheticTumors/issues/1).
 
 ## Paper
+**FreeTumor: Advance Tumor Segmentation via Large-Scale Tumor Synthesis**
+*Linshan Wu, Jiaxin Zhuang, Xuefeng Ni, Hao Chen*
+arXiv | 3 Jun 2024
+[paper](https://arxiv.org/pdf/2406.01264)
+
+**Generative Enhancement for 3D Medical Images**
+*Lingting Zhu1, Noel Codella, Dongdong Chen, Zhenchao Jin, Lu Yuan, Lequan Yu*
+arXiv | 24 May 2024
+[paper](https://arxiv.org/pdf/2403.12852)
 
 **From Pixel to Cancer: Cellular Automata in Computed Tomography**
 *Yuxiang Lai, Xiaoxi Chen, Angtian Wang, Alan Yuille, Zongwei Zhou*
