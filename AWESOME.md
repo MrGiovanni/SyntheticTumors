@@ -14,7 +14,7 @@ ECCV | 11 Mar 2024
 [![GitHub stars](https://img.shields.io/github/stars/ibrahimethemhamamci/GenerateCT.svg?logo=github&label=Stars)](https://github.com/ibrahimethemhamamci/GenerateCT)
 
 **Anatomically-Controllable Medical Image Generation with Segmentation-Guided Diffusion Models**
-*Nicholas Konz, Yuwen Chen, Haoyu Dong, and Maciej A. Mazurowski*
+*Nicholas Konz, Yuwen Chen, Haoyu Dong, Maciej A. Mazurowski*
 MICCAI | 19 Jun 2024
 [paper](https://arxiv.org/pdf/2402.05210)
 
@@ -27,6 +27,12 @@ arXiv | 3 Jun 2024
 *Lingting Zhu1, Noel Codella, Dongdong Chen, Zhenchao Jin, Lu Yuan, Lequan Yu*
 arXiv | 24 May 2024
 [paper](https://arxiv.org/pdf/2403.12852)
+
+**LeFusion: Synthesizing Myocardial Pathology on Cardiac MRI via Lesion-Focus Diffusion Models**
+*Hantao Zhang, Jiancheng Yang, Shouhong Wan, Pascal Fua*
+arXiv | 21 Mar 2024
+[paper](https://arxiv.org/pdf/2403.14066)
+[![GitHub stars](https://img.shields.io/github/stars/M3DV/LeFusion.svg?logo=github&label=Stars)](https://github.com/M3DV/LeFusion)
 
 **From Pixel to Cancer: Cellular Automata in Computed Tomography**
 *Yuxiang Lai, Xiaoxi Chen, Angtian Wang, Alan Yuille, Zongwei Zhou*
