@@ -6,6 +6,18 @@
 - 🔥 Welcome to share the paper and code through the [issues](https://github.com/MrGiovanni/SyntheticTumors/issues/1).
 
 ## Paper
+
+**GenerateCT: Text-Conditional Generation of 3D Chest CT Volumes**
+*Ibrahim Ethem Hamamci, Sezgin Er, Anjany Sekuboyina, Enis Simsar, Alperen Tezcan, Ayse Gulnihan Simsek, Sevval Nil Esirgun, Furkan Almas, Irem Doğan, Muhammed Furkan Dasdelen, Chinmay Prabhakar, Hadrien Reynaud, Sarthak Pati, Christian Bluethgen, Mehmet Kemal Ozdemir, and Bjoern Menze*
+ECCV | 11 Mar 2024
+[paper](https://arxiv.org/pdf/2305.16037v4)
+[![GitHub stars](https://img.shields.io/github/stars/ibrahimethemhamamci/GenerateCT.svg?logo=github&label=Stars)](https://github.com/ibrahimethemhamamci/GenerateCT)
+
+**Anatomically-Controllable Medical Image Generation with Segmentation-Guided Diffusion Models**
+*Nicholas Konz, Yuwen Chen, Haoyu Dong, and Maciej A. Mazurowski*
+MICCAI | 19 Jun 2024
+[paper](https://arxiv.org/pdf/2402.05210)
+
 **FreeTumor: Advance Tumor Segmentation via Large-Scale Tumor Synthesis**
 *Linshan Wu, Jiaxin Zhuang, Xuefeng Ni, Hao Chen*
 arXiv | 3 Jun 2024
