@@ -8,7 +8,7 @@
 ## Paper
 
 **GenerateCT: Text-Conditional Generation of 3D Chest CT Volumes**
-*Ibrahim Ethem Hamamci, Sezgin Er, Anjany Sekuboyina, Enis Simsar, Alperen Tezcan, Ayse Gulnihan Simsek, Sevval Nil Esirgun, Furkan Almas, Irem Doğan, Muhammed Furkan Dasdelen, Chinmay Prabhakar, Hadrien Reynaud, Sarthak Pati, Christian Bluethgen, Mehmet Kemal Ozdemir, and Bjoern Menze*
+*Ibrahim Ethem Hamamci, Sezgin Er, et al.*
 ECCV | 11 Mar 2024
 [paper](https://arxiv.org/pdf/2305.16037v4)
 [![GitHub stars](https://img.shields.io/github/stars/ibrahimethemhamamci/GenerateCT.svg?logo=github&label=Stars)](https://github.com/ibrahimethemhamamci/GenerateCT)
