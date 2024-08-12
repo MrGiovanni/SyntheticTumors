@@ -133,6 +133,11 @@ Medical Imaging Meets NeurIPS | 26 October 2022
 ICANN | 07 September 2022 
 [paper](https://drive.google.com/file/d/16GQqAv384QQyJ9YhXAIbDnzcfvqjLbEu)
 
+**Hierarchical Amortized GAN for 3D High Resolution Medical Image Synthesis** 
+*Li Sun, Junxiang Chen, Yanwu Xu, Mingming Gong, Ke Yu, Kayhan Batmanghelich* 
+IEEE JBHI | 9 August 2022 
+[paper](https://pubmed.ncbi.nlm.nih.gov/35522642/) [![GitHub stars](https://img.shields.io/github/stars/batmanlab/HA-GAN.svg?logo=github&label=Stars)](https://github.com/batmanlab/HA-GAN)
+
 **Anomaly segmentation in retinal images with poisson-blending data augmentation** 
 *Hualin Wang, Yuhong Zhou, Jiong Zhang, Jianqin Lei, Dongke Sun, Feng Xu, Xiayu Xu* 
 Medical Image Analysis | 10 July 2022 
