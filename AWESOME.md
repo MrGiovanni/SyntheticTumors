@@ -7,6 +7,12 @@
 
 ## Paper
 
+**Self-improving generative foundation model for synthetic medical image generation and clinical applications**
+*Jinzhuo Wang, Kai Wang, Yunfang Yu, Yuxing Lu, et al.*
+Nature Medicine | 11 Dec 2024
+[paper](https://www.nature.com/articles/s41591-024-03359-y)
+[![GitHub stars](https://img.shields.io/github/stars/WithStomach/MINIM.svg?logo=github&label=Stars)](https://github.com/WithStomach/MINIM)
+
 **GenerateCT: Text-Conditional Generation of 3D Chest CT Volumes**
 *Ibrahim Ethem Hamamci, Sezgin Er, et al.*
 ECCV | 11 Mar 2024
