@@ -1,5 +1,5 @@
 <h1 align="center">SynTumor</h1>
-<h3 align="center" style="font-size: 20px; margin-bottom: 4px">Synthetic Tumors Make AI Segment Tumors Better</h3>
+<h2 align="center" style="font-size: 20px; margin-bottom: 4px">Synthetic Tumors Make AI Segment Tumors Better</h2>
 
 <div align="center">
 
