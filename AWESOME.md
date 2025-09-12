@@ -7,6 +7,11 @@
 
 ## Paper
 
+**Cross-modal tumor segmentation using generative blending augmentation and self-training**
+*Guillaume Sallé, Pierre-Henri Conze, Julien Bert, Nicolas Boussion, Dimitris Visvikis, Vincent Jaouen*
+IEEE Transactions on Biomedical Engineering | Jan 2025
+[paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10487863)
+
 **Self-improving generative foundation model for synthetic medical image generation and clinical applications**
 *Jinzhuo Wang, Kai Wang, Yunfang Yu, Yuxing Lu, et al.*
 Nature Medicine | 11 Dec 2024
