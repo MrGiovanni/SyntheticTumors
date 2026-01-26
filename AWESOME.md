@@ -7,6 +7,12 @@
 
 ## Paper
 
+**Text-Driven Tumor Synthesis**
+*Xinran Li, Yi Shuai, Chen Liu, Qi Chen, Tianyu Lin, Pengfei Guo, Dong Yang, Can Zhao, Pedro R. A. S. Bassi, Daguang Xu, Kang Wang, Yang Yang, Alan L. Yuille, Zongwei Zhou*
+IEEE TMI | 25 Jan 2026
+[paper](https://www.cs.jhu.edu/~zongwei/publication/li2024text.pdf)
+[![GitHub stars](https://img.shields.io/github/stars/MrGiovanni/TextoMorph.svg?logo=github&label=Stars)](https://github.com/MrGiovanni/TextoMorph)
+
 **Cross-modal tumor segmentation using generative blending augmentation and self-training**
 *Guillaume Sallé, Pierre-Henri Conze, Julien Bert, Nicolas Boussion, Dimitris Visvikis, Vincent Jaouen*
 IEEE Transactions on Biomedical Engineering | Jan 2025
