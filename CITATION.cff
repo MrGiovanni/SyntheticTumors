@@ -1,0 +1,56 @@
+cff-version: 1.2.0
+message: "If you use SyntheticTumors, please cite the CVPR 2023 paper below."
+title: "SyntheticTumors: label-free tumor synthesis for medical image segmentation"
+abstract: "Official implementation of label-free liver tumor segmentation, in which synthetic tumors generated from handcrafted rules train segmentation models that match or exceed models trained on real annotated tumors."
+type: software
+repository-code: "https://github.com/MrGiovanni/SyntheticTumors"
+url: "https://github.com/MrGiovanni/SyntheticTumors"
+license: CC-BY-NC-ND-4.0
+keywords:
+  - "tumor-synthesis"
+  - "synthetic-data"
+  - "liver-tumor"
+  - "ct"
+  - "medical-imaging"
+  - "segmentation"
+  - "label-free"
+authors:
+  - family-names: "Hu"
+    given-names: "Qixin"
+  - family-names: "Chen"
+    given-names: "Yixiong"
+  - family-names: "Xiao"
+    given-names: "Junfei"
+  - family-names: "Sun"
+    given-names: "Shuwen"
+  - family-names: "Chen"
+    given-names: "Jieneng"
+  - family-names: "Yuille"
+    given-names: "Alan L."
+  - family-names: "Zhou"
+    given-names: "Zongwei"
+    orcid: "https://orcid.org/0000-0002-3154-9851"
+preferred-citation:
+  type: conference-paper
+  title: "Label-Free Liver Tumor Segmentation"
+  authors:
+    - family-names: "Hu"
+      given-names: "Qixin"
+    - family-names: "Chen"
+      given-names: "Yixiong"
+    - family-names: "Xiao"
+      given-names: "Junfei"
+    - family-names: "Sun"
+      given-names: "Shuwen"
+    - family-names: "Chen"
+      given-names: "Jieneng"
+    - family-names: "Yuille"
+      given-names: "Alan L."
+    - family-names: "Zhou"
+      given-names: "Zongwei"
+      orcid: "https://orcid.org/0000-0002-3154-9851"
+  collection-title: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+  start: 7422
+  end: 7432
+  year: 2023
+  doi: "10.1109/CVPR52729.2023.00717"
